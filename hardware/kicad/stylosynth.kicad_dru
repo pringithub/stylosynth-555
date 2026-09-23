@@ -1,0 +1,3 @@
+(version 1)
+(rule "single_spoke_ok"
+  (constraint min_resolved_spokes 1))

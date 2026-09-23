@@ -38,11 +38,9 @@
             52332.4 -40075.2  52664.1 -40018.9  53000 -40000  183000 -40000
             183336 -40018.9)
     )
-    (keepout "" (polygon F.Cu 0  68000 -93000  168000 -93000  168000 -137000  68000 -137000
-            68000 -93000))
     (via "Via[0-1]_800:400_um" "Via[0-1]_1000:500_um")
     (rule
-      (width 300)
+      (width 250)
       (clearance 200.1)
       (clearance 200.1 (type default_smd))
       (clearance 50 (type smd_smd))
@@ -1702,16 +1700,25 @@
         (use_via Via[0-1]_800:400_um)
       )
       (rule
-        (width 300)
+        (width 250)
         (clearance 200.1)
       )
     )
-    (class Power +5V +9V AMP_OUT BAT_P DC_IN GND HP SPK_DRV SPK_P VSW_IN V_FILT
+    (class Ground GND
       (circuit
         (use_via Via[0-1]_1000:500_um)
       )
       (rule
-        (width 600)
+        (width 500)
+        (clearance 200.1)
+      )
+    )
+    (class Power +5V +9V AMP_OUT BAT_P DC_IN HP SPK_DRV SPK_P VSW_IN V_FILT
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 500)
         (clearance 200.1)
       )
     )

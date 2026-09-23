@@ -36,7 +36,7 @@ ORIGIN = (50.0, 40.0)        # board top-left in KiCad page coordinates (mm)
 BOARD_W, BOARD_H, CORNER_R = 136.0, 98.0, 3.0
 KEYPAD_ORIGIN = (20.0, 57.0)  # top-left of the 96 x 36 mm keyboard
 LADDER_Y = 49.5              # single row of vertical ladder resistors above the key vias
-POWER_NETS = ["GND", "+9V", "+5V", "VSW_IN", "DC_IN", "BAT_P", "V_FILT", "AMP_OUT", "SPK_DRV", "SPK_P", "HP"]
+POWER_NETS = ["+9V", "+5V", "VSW_IN", "DC_IN", "BAT_P", "V_FILT", "AMP_OUT", "SPK_DRV", "SPK_P", "HP"]
 
 # ref -> (x, y, rotation_deg, side, anchor)
 # anchor: "center" = bbox centre, "top" = bbox top at y, "right" = bbox right edge at x, "origin" = fp origin
@@ -105,9 +105,11 @@ def write_project():
     pro = json.loads(PRO.read_text()) if PRO.exists() else {}
     pro["meta"] = {"filename": PRO.name, "version": 1}
     pro["net_settings"] = {
-        "classes": [cls("Default", 0.2, 0.3, 0.8, 0.4), cls("Power", 0.2, 0.6, 1.0, 0.5)],
+        "classes": [cls("Default", 0.2, 0.25, 0.8, 0.4), cls("Power", 0.2, 0.5, 1.0, 0.5),
+                    cls("Ground", 0.2, 0.5, 1.0, 0.5)],
         "meta": {"version": 3}, "net_colors": None, "netclass_assignments": None,
-        "netclass_patterns": [{"netclass": "Power", "pattern": n} for n in POWER_NETS]}
+        "netclass_patterns": [{"netclass": "Power", "pattern": n} for n in POWER_NETS]
+        + [{"netclass": "Ground", "pattern": "GND"}]}
     ds = pro.setdefault("board", {}).setdefault("design_settings", {})
     # JLCPCB standard 2-layer capabilities with margin
     ds["rules"] = {"allow_blind_buried_vias": False, "allow_microvias": False, "max_error": 0.005,
@@ -120,6 +122,9 @@ def write_project():
     ds["via_dimensions"] = [{"diameter": 0.0, "drill": 0.0}, {"diameter": 0.8, "drill": 0.4},
                             {"diameter": 1.0, "drill": 0.5}]
     PRO.write_text(json.dumps(pro, indent=2))
+    # GND pads in tight spots may only get one thermal spoke from the pour
+    PRO.with_suffix(".kicad_dru").write_text(
+        '(version 1)\n(rule "single_spoke_ok"\n  (constraint min_resolved_spokes 1))\n')
 
 
 def add_outline(board):
@@ -252,9 +257,6 @@ def stage_place():
 
     for text, x, y, size in SILK_TEXT:
         add_text(board, text, x, y, size)
-    # keep GND pour out from between the exposed keys
-    add_zone(board, pcbnew.F_Cu, None, rule_area=True,
-             rect=(KEYPAD_ORIGIN[0] - 2, KEYPAD_ORIGIN[1] - 4, KEYPAD_ORIGIN[0] + 98, KEYPAD_ORIGIN[1] + 40))
     board.BuildConnectivity()
     pcbnew.SaveBoard(str(PCB), board)
     if not pcbnew.ExportSpecctraDSN(board, str(DSN)):
@@ -266,7 +268,7 @@ def stage_route(passes=100):
     env = {k: v for k, v in os.environ.items()
            if not k.startswith(("GTK_", "GIO_", "GSETTINGS", "LOCPATH", "SNAP"))}
     cmd = ["java", "-Djava.awt.headless=true", "-jar", str(FREEROUTING), "-de", str(DSN), "-do", str(SES),
-           "-mp", str(passes), "--gui.enabled=false"]
+           "-mp", str(passes), "-inc", "Ground", "--gui.enabled=false"]
     print(" ".join(cmd))
     proc = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=3600)
     log = (proc.stdout + proc.stderr).splitlines()
@@ -327,9 +329,12 @@ def stage_finish():
     board = pcbnew.LoadBoard(str(PCB))
     for t in list(board.GetTracks()):
         board.Remove(t)
-    for z in [z for z in board.Zones() if not z.GetIsRuleArea()]:
+    for z in list(board.Zones()):
         board.Remove(z)
     n_tracks, n_vias = import_ses(board)
+    # added after routing: in the DSN it would have been a hard keep-out for the key traces
+    add_zone(board, pcbnew.F_Cu, None, rule_area=True,
+             rect=(KEYPAD_ORIGIN[0] - 2, KEYPAD_ORIGIN[1] - 4, KEYPAD_ORIGIN[0] + 98, KEYPAD_ORIGIN[1] + 40))
     gnd = board.FindNet("GND")
     add_zone(board, pcbnew.F_Cu, gnd)
     add_zone(board, pcbnew.B_Cu, gnd)
