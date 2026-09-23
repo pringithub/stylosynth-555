@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+# KiCad backups / caches
+*-backups/
+*.kicad_prl
+*.lck
+fp-info-cache
+~*
+_autosave-*
+hardware/kicad/stylosynth.net

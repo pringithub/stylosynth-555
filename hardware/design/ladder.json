@@ -1,0 +1,517 @@
+{
+  "c_t_farad": 2.2e-08,
+  "k_555": 0.7213475204444817,
+  "tolerance_window": 0.12,
+  "dividers": {
+    "BASS": 16,
+    "LOW": 8,
+    "MID": 4,
+    "HIGH": 2
+  },
+  "f555_range_hz": [
+    880.0,
+    2637.02
+  ],
+  "segments": [
+    {
+      "segment": 0,
+      "key": 20,
+      "note_high": "E6",
+      "f555_hz": 2637.02,
+      "r_cum_ohm": 12433.9,
+      "r_nominal_ohm": 12433.9,
+      "r_fixed_ohm": 9100.0,
+      "r_fixed": "9.1k",
+      "trimmer_ohm": 5000.0,
+      "trimmer": "5k",
+      "wiper_at_nominal": 0.667,
+      "notes": {
+        "BASS": "E3",
+        "LOW": "E4",
+        "MID": "E5",
+        "HIGH": "E6"
+      },
+      "freqs_hz": {
+        "BASS": 164.81,
+        "LOW": 329.63,
+        "MID": 659.26,
+        "HIGH": 1318.51
+      }
+    },
+    {
+      "segment": 1,
+      "key": 19,
+      "note_high": "D#6",
+      "f555_hz": 2489.02,
+      "r_cum_ohm": 13173.3,
+      "r_nominal_ohm": 739.4,
+      "r_fixed_ohm": 220.00000000000003,
+      "r_fixed": "220",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.519,
+      "notes": {
+        "BASS": "D#3",
+        "LOW": "D#4",
+        "MID": "D#5",
+        "HIGH": "D#6"
+      },
+      "freqs_hz": {
+        "BASS": 155.56,
+        "LOW": 311.13,
+        "MID": 622.25,
+        "HIGH": 1244.51
+      }
+    },
+    {
+      "segment": 2,
+      "key": 18,
+      "note_high": "D6",
+      "f555_hz": 2349.32,
+      "r_cum_ohm": 13956.6,
+      "r_nominal_ohm": 783.3,
+      "r_fixed_ohm": 270.0,
+      "r_fixed": "270",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.513,
+      "notes": {
+        "BASS": "D3",
+        "LOW": "D4",
+        "MID": "D5",
+        "HIGH": "D6"
+      },
+      "freqs_hz": {
+        "BASS": 146.83,
+        "LOW": 293.66,
+        "MID": 587.33,
+        "HIGH": 1174.66
+      }
+    },
+    {
+      "segment": 3,
+      "key": 17,
+      "note_high": "C#6",
+      "f555_hz": 2217.46,
+      "r_cum_ohm": 14786.5,
+      "r_nominal_ohm": 829.9,
+      "r_fixed_ohm": 300.0,
+      "r_fixed": "300",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.53,
+      "notes": {
+        "BASS": "C#3",
+        "LOW": "C#4",
+        "MID": "C#5",
+        "HIGH": "C#6"
+      },
+      "freqs_hz": {
+        "BASS": 138.59,
+        "LOW": 277.18,
+        "MID": 554.37,
+        "HIGH": 1108.73
+      }
+    },
+    {
+      "segment": 4,
+      "key": 16,
+      "note_high": "C6",
+      "f555_hz": 2093.0,
+      "r_cum_ohm": 15665.8,
+      "r_nominal_ohm": 879.3,
+      "r_fixed_ohm": 360.0,
+      "r_fixed": "360",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.519,
+      "notes": {
+        "BASS": "C3",
+        "LOW": "C4",
+        "MID": "C5",
+        "HIGH": "C6"
+      },
+      "freqs_hz": {
+        "BASS": 130.81,
+        "LOW": 261.63,
+        "MID": 523.25,
+        "HIGH": 1046.5
+      }
+    },
+    {
+      "segment": 5,
+      "key": 15,
+      "note_high": "B5",
+      "f555_hz": 1975.53,
+      "r_cum_ohm": 16597.3,
+      "r_nominal_ohm": 931.5,
+      "r_fixed_ohm": 430.0,
+      "r_fixed": "430",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.502,
+      "notes": {
+        "BASS": "B2",
+        "LOW": "B3",
+        "MID": "B4",
+        "HIGH": "B5"
+      },
+      "freqs_hz": {
+        "BASS": 123.47,
+        "LOW": 246.94,
+        "MID": 493.88,
+        "HIGH": 987.77
+      }
+    },
+    {
+      "segment": 6,
+      "key": 14,
+      "note_high": "A#5",
+      "f555_hz": 1864.66,
+      "r_cum_ohm": 17584.2,
+      "r_nominal_ohm": 986.9,
+      "r_fixed_ohm": 470.0,
+      "r_fixed": "470",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.517,
+      "notes": {
+        "BASS": "A#2",
+        "LOW": "A#3",
+        "MID": "A#4",
+        "HIGH": "A#5"
+      },
+      "freqs_hz": {
+        "BASS": 116.54,
+        "LOW": 233.08,
+        "MID": 466.16,
+        "HIGH": 932.33
+      }
+    },
+    {
+      "segment": 7,
+      "key": 13,
+      "note_high": "A5",
+      "f555_hz": 1760.0,
+      "r_cum_ohm": 18629.8,
+      "r_nominal_ohm": 1045.6,
+      "r_fixed_ohm": 509.99999999999994,
+      "r_fixed": "510",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.536,
+      "notes": {
+        "BASS": "A2",
+        "LOW": "A3",
+        "MID": "A4",
+        "HIGH": "A5"
+      },
+      "freqs_hz": {
+        "BASS": 110.0,
+        "LOW": 220.0,
+        "MID": 440.0,
+        "HIGH": 880.0
+      }
+    },
+    {
+      "segment": 8,
+      "key": 12,
+      "note_high": "G#5",
+      "f555_hz": 1661.22,
+      "r_cum_ohm": 19737.6,
+      "r_nominal_ohm": 1107.8,
+      "r_fixed_ohm": 560.0,
+      "r_fixed": "560",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.548,
+      "notes": {
+        "BASS": "G#2",
+        "LOW": "G#3",
+        "MID": "G#4",
+        "HIGH": "G#5"
+      },
+      "freqs_hz": {
+        "BASS": 103.83,
+        "LOW": 207.65,
+        "MID": 415.3,
+        "HIGH": 830.61
+      }
+    },
+    {
+      "segment": 9,
+      "key": 11,
+      "note_high": "G5",
+      "f555_hz": 1567.98,
+      "r_cum_ohm": 20911.3,
+      "r_nominal_ohm": 1173.7,
+      "r_fixed_ohm": 620.0,
+      "r_fixed": "620",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.554,
+      "notes": {
+        "BASS": "G2",
+        "LOW": "G3",
+        "MID": "G4",
+        "HIGH": "G5"
+      },
+      "freqs_hz": {
+        "BASS": 98.0,
+        "LOW": 196.0,
+        "MID": 392.0,
+        "HIGH": 783.99
+      }
+    },
+    {
+      "segment": 10,
+      "key": 10,
+      "note_high": "F#5",
+      "f555_hz": 1479.98,
+      "r_cum_ohm": 22154.7,
+      "r_nominal_ohm": 1243.5,
+      "r_fixed_ohm": 680.0,
+      "r_fixed": "680",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.563,
+      "notes": {
+        "BASS": "F#2",
+        "LOW": "F#3",
+        "MID": "F#4",
+        "HIGH": "F#5"
+      },
+      "freqs_hz": {
+        "BASS": 92.5,
+        "LOW": 185.0,
+        "MID": 369.99,
+        "HIGH": 739.99
+      }
+    },
+    {
+      "segment": 11,
+      "key": 9,
+      "note_high": "F5",
+      "f555_hz": 1396.91,
+      "r_cum_ohm": 23472.1,
+      "r_nominal_ohm": 1317.4,
+      "r_fixed_ohm": 750.0,
+      "r_fixed": "750",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.567,
+      "notes": {
+        "BASS": "F2",
+        "LOW": "F3",
+        "MID": "F4",
+        "HIGH": "F5"
+      },
+      "freqs_hz": {
+        "BASS": 87.31,
+        "LOW": 174.61,
+        "MID": 349.23,
+        "HIGH": 698.46
+      }
+    },
+    {
+      "segment": 12,
+      "key": 8,
+      "note_high": "E5",
+      "f555_hz": 1318.51,
+      "r_cum_ohm": 24867.9,
+      "r_nominal_ohm": 1395.7,
+      "r_fixed_ohm": 819.9999999999999,
+      "r_fixed": "820",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.576,
+      "notes": {
+        "BASS": "E2",
+        "LOW": "E3",
+        "MID": "E4",
+        "HIGH": "E5"
+      },
+      "freqs_hz": {
+        "BASS": 82.41,
+        "LOW": 164.81,
+        "MID": 329.63,
+        "HIGH": 659.26
+      }
+    },
+    {
+      "segment": 13,
+      "key": 7,
+      "note_high": "D#5",
+      "f555_hz": 1244.51,
+      "r_cum_ohm": 26346.6,
+      "r_nominal_ohm": 1478.7,
+      "r_fixed_ohm": 910.0,
+      "r_fixed": "910",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.569,
+      "notes": {
+        "BASS": "D#2",
+        "LOW": "D#3",
+        "MID": "D#4",
+        "HIGH": "D#5"
+      },
+      "freqs_hz": {
+        "BASS": 77.78,
+        "LOW": 155.56,
+        "MID": 311.13,
+        "HIGH": 622.25
+      }
+    },
+    {
+      "segment": 14,
+      "key": 6,
+      "note_high": "D5",
+      "f555_hz": 1174.66,
+      "r_cum_ohm": 27913.2,
+      "r_nominal_ohm": 1566.6,
+      "r_fixed_ohm": 1000.0,
+      "r_fixed": "1k",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.567,
+      "notes": {
+        "BASS": "D2",
+        "LOW": "D3",
+        "MID": "D4",
+        "HIGH": "D5"
+      },
+      "freqs_hz": {
+        "BASS": 73.42,
+        "LOW": 146.83,
+        "MID": 293.66,
+        "HIGH": 587.33
+      }
+    },
+    {
+      "segment": 15,
+      "key": 5,
+      "note_high": "C#5",
+      "f555_hz": 1108.73,
+      "r_cum_ohm": 29573.0,
+      "r_nominal_ohm": 1659.8,
+      "r_fixed_ohm": 1100.0,
+      "r_fixed": "1.1k",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.56,
+      "notes": {
+        "BASS": "C#2",
+        "LOW": "C#3",
+        "MID": "C#4",
+        "HIGH": "C#5"
+      },
+      "freqs_hz": {
+        "BASS": 69.3,
+        "LOW": 138.59,
+        "MID": 277.18,
+        "HIGH": 554.37
+      }
+    },
+    {
+      "segment": 16,
+      "key": 4,
+      "note_high": "C5",
+      "f555_hz": 1046.5,
+      "r_cum_ohm": 31331.5,
+      "r_nominal_ohm": 1758.5,
+      "r_fixed_ohm": 1200.0,
+      "r_fixed": "1.2k",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.559,
+      "notes": {
+        "BASS": "C2",
+        "LOW": "C3",
+        "MID": "C4",
+        "HIGH": "C5"
+      },
+      "freqs_hz": {
+        "BASS": 65.41,
+        "LOW": 130.81,
+        "MID": 261.63,
+        "HIGH": 523.25
+      }
+    },
+    {
+      "segment": 17,
+      "key": 3,
+      "note_high": "B4",
+      "f555_hz": 987.77,
+      "r_cum_ohm": 33194.6,
+      "r_nominal_ohm": 1863.1,
+      "r_fixed_ohm": 1300.0,
+      "r_fixed": "1.3k",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.563,
+      "notes": {
+        "BASS": "B1",
+        "LOW": "B2",
+        "MID": "B3",
+        "HIGH": "B4"
+      },
+      "freqs_hz": {
+        "BASS": 61.74,
+        "LOW": 123.47,
+        "MID": 246.94,
+        "HIGH": 493.88
+      }
+    },
+    {
+      "segment": 18,
+      "key": 2,
+      "note_high": "A#4",
+      "f555_hz": 932.33,
+      "r_cum_ohm": 35168.5,
+      "r_nominal_ohm": 1973.9,
+      "r_fixed_ohm": 1300.0,
+      "r_fixed": "1.3k",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.674,
+      "notes": {
+        "BASS": "A#1",
+        "LOW": "A#2",
+        "MID": "A#3",
+        "HIGH": "A#4"
+      },
+      "freqs_hz": {
+        "BASS": 58.27,
+        "LOW": 116.54,
+        "MID": 233.08,
+        "HIGH": 466.16
+      }
+    },
+    {
+      "segment": 19,
+      "key": 1,
+      "note_high": "A4",
+      "f555_hz": 880.0,
+      "r_cum_ohm": 37259.7,
+      "r_nominal_ohm": 2091.2,
+      "r_fixed_ohm": 1500.0,
+      "r_fixed": "1.5k",
+      "trimmer_ohm": 1000.0,
+      "trimmer": "1k",
+      "wiper_at_nominal": 0.591,
+      "notes": {
+        "BASS": "A1",
+        "LOW": "A2",
+        "MID": "A3",
+        "HIGH": "A4"
+      },
+      "freqs_hz": {
+        "BASS": 55.0,
+        "LOW": 110.0,
+        "MID": 220.0,
+        "HIGH": 440.0
+      }
+    }
+  ]
+}
