@@ -1,12 +1,21 @@
 # StyloSynth-555: tuning guide
 
-Each key has its own 25-turn trimmer. The ladder is a chain, so a key's pitch depends on
-**every key to its right**. Always tune **from key 20 (rightmost, highest E) leftwards to key 1 (A)**.
-Once a key is tuned, adjusting keys to its left does not change it.
+The key ladder uses fixed 1 % resistors, so there are no per-key trimmers. Two trimmers calibrate
+the whole keyboard at once:
+
+| Trimmer | Location | What it does | Tune on |
+|---|---|---|---|
+| **RV4 TUNE** | right of the keyboard, "TUNE (key 20)" | adds an offset in series with the whole ladder | key 20 (top E) |
+| **RV5 SPAN** | oscillator block, "SPAN (key 1)" | scales every note by the same ratio (555 CV divider) | key 1 (bottom A) |
+
+Monte Carlo analysis with 1 % resistors and a 2.5 % timing capacitor (2000 builds) puts the worst key
+within **±3.6 cents in 95 % of builds (5 cents max)** after this two-point calibration
+(see `monte_carlo_1pct` in [ladder.json](../hardware/design/ladder.json)). Most listeners can't
+hear that. With 0.1 % resistors it drops below 2 cents.
 
 ## Octave switches
-The CD4040 divides the oscillator by exactly 2, 4, 8 or 16, so the octaves are always perfect.
-You only need to tune at one setting.
+The CD4040 divides the oscillator by exactly 2, 4, 8 or 16, so octaves are always perfect.
+Calibrate at one setting only.
 
 | OCT-1 | OCT-2 | Divider | Range (key 1 to key 20) |
 |---|---|---|---|
@@ -17,27 +26,21 @@ You only need to tune at one setting.
 
 Which slider direction counts as "on" depends on the switch. Check by ear once and mark it.
 
-## Procedure
-1. Vibrato **off**, tone **bright**, volume medium. Let the board warm up for a minute.
-2. Set OCT-1 on and OCT-2 off (A3–E5). Open a chromatic tuner app next to the speaker, or plug
-   headphones into a tuner.
-3. **Key 20 (E5): adjust RV101 (5k master trimmer)** until the tuner reads E. This sets the pitch of
-   the whole instrument.
-4. Key 19 (D#5): RV102. Key 18 (D5): RV103. Continue leftwards: **key *k* is trimmed by
-   RV(121 − *k*)**. The trimmer sits directly above its key.
-5. Finish at key 1 (A3) with RV120.
-6. Recheck a few keys. If key 20 drifted (temperature), retouch RV101. That shifts every key by the
-   same ratio, so the relative tuning stays correct.
+## Procedure (2–3 passes)
+1. Vibrato **off**, tone **bright**, medium volume. Let the board warm up for a minute.
+2. Set OCT-1 on and OCT-2 off, and open a chromatic tuner app next to the speaker.
+3. Play **key 20 (E5)**. Adjust **TUNE** until the tuner shows E.
+4. Play **key 1 (A3)**. Adjust **SPAN** until the tuner shows A.
+5. Go back to key 20 and repeat steps 3–4 until both are in tune without further adjustment.
+   The two controls interact a little; it usually converges in 2–3 passes.
+6. Spot-check a few keys in the middle. They should all be within a few cents.
 
-Turning a trimmer clockwise usually *raises* its resistance and *lowers* the pitch. If a key goes the
-wrong way, turn the other way. There is about ±12 % of range, so every key reaches its note
-even with a 5 % timing capacitor.
+Turning **SPAN** changes every key by the same ratio. **TUNE** has the most effect on the top keys.
 
 ## Vibrato
 - **RV2 (rate trimmer):** about 4–9.5 Hz; 5–6 Hz sounds classic.
 - **DEPTH pot (RV3):** 0 to about ±45 cents. The VIB switch turns it on and off without clicks.
 
 ## Reference values
-The design values for every segment (target Hz, fixed resistor, trimmer, expected wiper position)
-are in [hardware/design/ladder.csv](../hardware/design/ladder.csv). With the right note, most trimmers
-sit near mid-travel (0.5–0.67).
+Ladder resistor values and per-key design frequencies are in
+[hardware/design/ladder.csv](../hardware/design/ladder.csv).

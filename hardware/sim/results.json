@@ -5,176 +5,203 @@
         "key": 20,
         "note": "E6",
         "f_target": 2637.02,
-        "f_sim": 2613.01,
-        "err_pct": -0.91
+        "f_sim": 2651.82,
+        "model_err_cents": -1.95,
+        "err_pct": 0.561
       },
       {
         "key": 19,
         "note": "D#6",
-        "f_target": 2489.02,
-        "f_sim": 2467.31,
-        "err_pct": -0.872
+        "f_target": 2489.016,
+        "f_sim": 2501.88,
+        "model_err_cents": -1.84,
+        "err_pct": 0.517
       },
       {
         "key": 18,
         "note": "D6",
-        "f_target": 2349.32,
-        "f_sim": 2329.92,
-        "err_pct": -0.826
+        "f_target": 2349.318,
+        "f_sim": 2361.45,
+        "model_err_cents": -1.95,
+        "err_pct": 0.516
       },
       {
         "key": 17,
         "note": "C#6",
-        "f_target": 2217.46,
-        "f_sim": 2199.9,
-        "err_pct": -0.792
+        "f_target": 2217.461,
+        "f_sim": 2227.17,
+        "model_err_cents": -2.1,
+        "err_pct": 0.438
       },
       {
         "key": 16,
         "note": "C6",
-        "f_target": 2093.0,
-        "f_sim": 2076.84,
-        "err_pct": -0.772
+        "f_target": 2093.005,
+        "f_sim": 2102.17,
+        "model_err_cents": -1.88,
+        "err_pct": 0.438
       },
       {
         "key": 15,
         "note": "B5",
-        "f_target": 1975.53,
-        "f_sim": 1961.47,
-        "err_pct": -0.712
+        "f_target": 1975.533,
+        "f_sim": 1982.04,
+        "model_err_cents": -2.16,
+        "err_pct": 0.329
       },
       {
         "key": 14,
         "note": "A#5",
-        "f_target": 1864.66,
-        "f_sim": 1851.73,
-        "err_pct": -0.693
+        "f_target": 1864.655,
+        "f_sim": 1870.38,
+        "model_err_cents": -1.99,
+        "err_pct": 0.307
       },
       {
         "key": 13,
         "note": "A5",
         "f_target": 1760.0,
-        "f_sim": 1748.46,
-        "err_pct": -0.656
+        "f_sim": 1765.75,
+        "model_err_cents": -2.0,
+        "err_pct": 0.327
       },
       {
         "key": 12,
         "note": "G#5",
-        "f_target": 1661.22,
-        "f_sim": 1650.82,
-        "err_pct": -0.626
+        "f_target": 1661.219,
+        "f_sim": 1665.42,
+        "model_err_cents": -2.08,
+        "err_pct": 0.253
       },
       {
         "key": 11,
         "note": "G5",
-        "f_target": 1567.98,
-        "f_sim": 1558.6,
-        "err_pct": -0.598
+        "f_target": 1567.982,
+        "f_sim": 1572.21,
+        "model_err_cents": -2.07,
+        "err_pct": 0.27
       },
       {
         "key": 10,
         "note": "F#5",
-        "f_target": 1479.98,
-        "f_sim": 1471.67,
-        "err_pct": -0.561
+        "f_target": 1479.978,
+        "f_sim": 1483.02,
+        "model_err_cents": -1.91,
+        "err_pct": 0.206
       },
       {
         "key": 9,
         "note": "F5",
-        "f_target": 1396.91,
-        "f_sim": 1389.18,
-        "err_pct": -0.553
+        "f_target": 1396.913,
+        "f_sim": 1399.38,
+        "model_err_cents": -2.34,
+        "err_pct": 0.177
       },
       {
         "key": 8,
         "note": "E5",
         "f_target": 1318.51,
-        "f_sim": 1311.56,
-        "err_pct": -0.527
+        "f_sim": 1321.44,
+        "model_err_cents": -2.12,
+        "err_pct": 0.222
       },
       {
         "key": 7,
         "note": "D#5",
-        "f_target": 1244.51,
-        "f_sim": 1238.19,
-        "err_pct": -0.508
+        "f_target": 1244.508,
+        "f_sim": 1246.73,
+        "model_err_cents": -2.33,
+        "err_pct": 0.178
       },
       {
         "key": 6,
         "note": "D5",
-        "f_target": 1174.66,
-        "f_sim": 1168.91,
-        "err_pct": -0.49
+        "f_target": 1174.659,
+        "f_sim": 1176.84,
+        "model_err_cents": -2.24,
+        "err_pct": 0.186
       },
       {
         "key": 5,
         "note": "C#5",
-        "f_target": 1108.73,
-        "f_sim": 1103.56,
-        "err_pct": -0.466
+        "f_target": 1108.731,
+        "f_sim": 1110.12,
+        "model_err_cents": -2.38,
+        "err_pct": 0.126
       },
       {
         "key": 4,
         "note": "C5",
-        "f_target": 1046.5,
-        "f_sim": 1041.79,
-        "err_pct": -0.451
+        "f_target": 1046.502,
+        "f_sim": 1047.78,
+        "model_err_cents": -2.18,
+        "err_pct": 0.122
       },
       {
         "key": 3,
         "note": "B4",
-        "f_target": 987.77,
-        "f_sim": 983.48,
-        "err_pct": -0.435
+        "f_target": 987.767,
+        "f_sim": 989.22,
+        "model_err_cents": -2.31,
+        "err_pct": 0.147
       },
       {
         "key": 2,
         "note": "A#4",
-        "f_target": 932.33,
-        "f_sim": 928.38,
-        "err_pct": -0.424
+        "f_target": 932.328,
+        "f_sim": 933.48,
+        "model_err_cents": -2.32,
+        "err_pct": 0.124
       },
       {
         "key": 1,
         "note": "A4",
         "f_target": 880.0,
-        "f_sim": 876.42,
-        "err_pct": -0.406
+        "f_sim": 880.28,
+        "model_err_cents": -2.12,
+        "err_pct": 0.032
       }
     ],
-    "worst_err_pct": 0.91,
+    "model_spread_cents": 0.54,
+    "worst_err_pct": 0.561,
     "pass": true
   },
-  "trim_range": {
-    "fails": [],
+  "tolerance": {
+    "trials": 2000,
+    "r_tol": 0.01,
+    "c_tol": 0.025,
+    "calibration_failures": 0,
+    "worst_key_cents_median": 2.34,
+    "worst_key_cents_p95": 3.59,
+    "worst_key_cents_max": 5.01,
     "pass": true
   },
   "lfo": {
     "min_rate_R": {
       "R": 168000.0,
       "f_hz": 3.88,
-      "cv_dev_v": 0.0728,
-      "cv_mean_v": 3.3325
+      "cv_dev_v": 0.0721,
+      "cv_mean_v": 3.2951
     },
     "mid": {
       "R": 118000.0,
       "f_hz": 5.49,
-      "cv_dev_v": 0.0827,
-      "cv_mean_v": 3.3329
+      "cv_dev_v": 0.0819,
+      "cv_mean_v": 3.2956
     },
     "max_rate_R": {
       "R": 68000.0,
-      "f_hz": 9.54,
-      "cv_dev_v": 0.0941,
-      "cv_mean_v": 3.3324
+      "f_hz": 9.57,
+      "cv_dev_v": 0.0919,
+      "cv_mean_v": 3.2947
     },
     "pass": true
   },
   "vibrato": {
-    "f0": 1471.67,
-    "f_hi": 1510.8,
-    "f_lo": 1431.75,
-    "depth_cents_pk": 46.5,
+    "f0": 1483.24,
+    "f_hi": 1522.07,
+    "f_lo": 1444.04,
+    "depth_cents_pk": 45.6,
     "pass": true
   },
   "audio": {

@@ -11,6 +11,8 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import calc_ladder  # noqa: E402
 from ngspice import NgSpice, rising_edges  # noqa: E402
 
 HW = Path(__file__).resolve().parents[1]
@@ -18,10 +20,13 @@ LADDER = json.loads((HW / "design" / "ladder.json").read_text())
 C_T = LADDER["c_t_farad"]
 VDD = 5.0
 
-# CV network: external 1.5k/3.0k divider swamps the unknown internal divider of CMOS 555s
-CV_R_TOP, CV_R_BOT = 1.5e3, 3.0e3
+# CV network: external divider (SPAN trimmer at mid-travel) swamps the unknown internal divider
+CV_R_TOP = LADDER["cv_r_top_ohm"]
+CV_R_BOT = LADDER["cv_r_bot_fixed_ohm"] + LADDER["span_trimmer_ohm"] / 2
 CV_R_TH = CV_R_TOP * CV_R_BOT / (CV_R_TOP + CV_R_BOT)
 R_INT_555 = 100e3            # assumed internal divider resistor (TLC555), swamped by the external one
+R_STYLUS = 100.0             # R6
+R_OUT_555 = 100.0            # modelled TLC555 output resistance
 
 # Vibrato injection
 R_SERIES_VIB = 4.7e3
@@ -53,7 +58,7 @@ S1 s 0 ctl 0 swm
 V1 one 0 DC 1
 Rs1 one s 1k
 Bo outi 0 V = {VDD}*v(s)
-Rout outi out 100
+Rout outi out {R_OUT_555}
 Rlad out th {r_timing}
 Ct th 0 {c_t} IC=0
 Rpd th 0 10Meg
@@ -72,29 +77,28 @@ def measure_freq(ng, netlist):
 
 
 def sim_ladder(ng):
-    rows, ok = [], True
-    for seg in LADDER["segments"]:
-        f_target = seg["f555_hz"]
-        f_sim = measure_freq(ng, tlc555_ladder(seg["r_cum_ohm"]))
-        rows.append({"key": seg["key"], "note": seg["note_high"], "f_target": f_target,
-                     "f_sim": round(f_sim, 2), "err_pct": round(100 * (f_sim / f_target - 1), 3)})
-    # model-vs-formula error must be small enough to be absorbed by the trimmers
-    worst = max(abs(r["err_pct"]) for r in rows)
-    ok = worst < 3.0
-    return {"rows": rows, "worst_err_pct": worst, "pass": ok}
+    """Nominal ladder (TUNE/SPAN at mid) in ngspice vs. the analytic model used for the Monte Carlo."""
+    segs = LADDER["segments"]
+    model = calc_ladder.ladder_freqs([s["r_fixed_ohm"] for s in segs], LADDER["tune_trimmer_ohm"] / 2,
+                                     LADDER["span_trimmer_ohm"] / 2, C_T, R_OUT_555 + R_STYLUS,
+                                     r_int=R_INT_555)
+    rows = []
+    for seg, f_model in zip(segs, model):
+        r = seg["r_cum_nominal_ohm"] + R_STYLUS
+        f_sim = measure_freq(ng, tlc555_ladder(r))
+        rows.append({"key": seg["key"], "note": seg["note_high"], "f_target": seg["f555_hz"],
+                     "f_sim": round(f_sim, 2), "model_err_cents": round(1200 * math.log2(f_sim / f_model), 2),
+                     "err_pct": round(100 * (f_sim / seg["f555_hz"] - 1), 3)})
+    # the model drives the tolerance analysis, so it must match the circuit sim closely
+    spread = max(r["model_err_cents"] for r in rows) - min(r["model_err_cents"] for r in rows)
+    return {"rows": rows, "model_spread_cents": round(spread, 2), "worst_err_pct": max(abs(r["err_pct"]) for r in rows),
+            "pass": spread < 2.0}
 
 
-def sim_trim_range():
-    """Sequential tuning: each segment must reach its own target for C_T within +/-5 %."""
-    k_err = 1.0  # measured formula error is added through the tolerance window in calc_ladder
-    fails = []
-    for seg in LADDER["segments"]:
-        for c_scale in (0.95, 1.05):
-            need = seg["r_nominal_ohm"] / c_scale * k_err
-            lo, hi = seg["r_fixed_ohm"], seg["r_fixed_ohm"] + seg["trimmer_ohm"]
-            if not lo <= need <= hi:
-                fails.append((seg["segment"], c_scale, round(need), lo, hi))
-    return {"fails": fails, "pass": not fails}
+def sim_tolerance():
+    """Two-point calibrated tuning accuracy with 1 % resistors / 2.5 % C_T (Monte Carlo from calc_ladder)."""
+    mc = LADDER["monte_carlo_1pct"]
+    return {**mc, "pass": mc["calibration_failures"] == 0 and mc["worst_key_cents_p95"] < 5.0}
 
 
 def lfo_netlist(r_rate):
@@ -144,10 +148,11 @@ def sim_lfo(ng):
 def sim_vibrato_depth(ng, cv_dev):
     """555 pitch swing for the full-depth CV deviation, at the middle key."""
     seg = LADDER["segments"][10]
-    vc0 = 2 * VDD / 3
-    f0 = measure_freq(ng, tlc555_ladder(seg["r_cum_ohm"], vcv_force=vc0))
-    f_hi = measure_freq(ng, tlc555_ladder(seg["r_cum_ohm"], vcv_force=vc0 - cv_dev))
-    f_lo = measure_freq(ng, tlc555_ladder(seg["r_cum_ohm"], vcv_force=vc0 + cv_dev))
+    vc0 = LADDER["vc_nominal_v"]
+    r = seg["r_cum_nominal_ohm"] + R_STYLUS
+    f0 = measure_freq(ng, tlc555_ladder(r, vcv_force=vc0))
+    f_hi = measure_freq(ng, tlc555_ladder(r, vcv_force=vc0 - cv_dev))
+    f_lo = measure_freq(ng, tlc555_ladder(r, vcv_force=vc0 + cv_dev))
     cents = 1200 * math.log2(f_hi / f_lo) / 2
     return {"f0": round(f0, 2), "f_hi": round(f_hi, 2), "f_lo": round(f_lo, 2),
             "depth_cents_pk": round(cents, 1), "pass": 25 <= cents <= 80}
@@ -187,7 +192,7 @@ def main():
     results = {}
     print("ladder oscillator ...")
     results["ladder"] = sim_ladder(ng)
-    results["trim_range"] = sim_trim_range()
+    results["tolerance"] = sim_tolerance()
     print("LFO ...")
     results["lfo"] = sim_lfo(ng)
     results["vibrato"] = sim_vibrato_depth(ng, results["lfo"]["mid"]["cv_dev_v"])
@@ -196,12 +201,14 @@ def main():
     (Path(__file__).parent / "results.json").write_text(json.dumps(results, indent=2, default=lambda o: o.item()))
 
     lad = results["ladder"]
-    print("\nkey note  target_Hz   sim_Hz   err%")
+    print("\nkey note  target_Hz   sim_Hz   err%  sim-vs-model(cents)")
     for r in lad["rows"]:
-        print(f"{r['key']:>3} {r['note']:<4} {r['f_target']:>9.2f} {r['f_sim']:>8.2f} {r['err_pct']:>6.2f}")
-    print(f"\nladder model error worst {lad['worst_err_pct']}%  -> {'PASS' if lad['pass'] else 'FAIL'}")
-    print(f"trimmer coverage (C_T +/-5%) -> {'PASS' if results['trim_range']['pass'] else 'FAIL'} "
-          f"{results['trim_range']['fails']}")
+        print(f"{r['key']:>3} {r['note']:<4} {r['f_target']:>9.2f} {r['f_sim']:>8.2f} {r['err_pct']:>6.2f} "
+              f"{r['model_err_cents']:>8.2f}")
+    print(f"\nladder sim-vs-model spread {lad['model_spread_cents']} cents -> {'PASS' if lad['pass'] else 'FAIL'}")
+    tol = results["tolerance"]
+    print(f"calibrated tuning (1% R, 2.5% C): worst key p95 {tol['worst_key_cents_p95']} cents, "
+          f"max {tol['worst_key_cents_max']} -> {'PASS' if tol['pass'] else 'FAIL'}")
     print(f"LFO {json.dumps({k: v for k, v in results['lfo'].items() if k != 'pass'})} -> "
           f"{'PASS' if results['lfo']['pass'] else 'FAIL'}")
     print(f"vibrato full depth {results['vibrato']['depth_cents_pk']} cents pk -> "

@@ -18,6 +18,7 @@ import pcbnew
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import circuit  # noqa: E402
+import gen_keypad  # noqa: E402
 from gen_schematic import uid  # noqa: E402
 from sexpr import find, find1, parse  # noqa: E402
 
@@ -32,58 +33,60 @@ FREEROUTING = ROOT / "tools" / "freerouting-2.1.0.jar"
 FPDIRS = {"StyloSynth": KICAD / "lib" / "StyloSynth.pretty"}
 
 ORIGIN = (50.0, 40.0)        # board top-left in KiCad page coordinates (mm)
-BOARD_W, BOARD_H, CORNER_R = 200.0, 120.0, 3.0
-KEYPAD_ORIGIN = (100.0, 64.0)
-KEY_X0, KEY_PITCH = 24.0, 8.0
+BOARD_W, BOARD_H, CORNER_R = 170.0, 108.0, 3.0
+KEYPAD_ORIGIN = (37.0, 58.0)  # top-left of the 96 x 36 mm keyboard
+LADDER_ROWS = (45.0, 50.5)   # staggered rows of vertical ladder resistors above the keys
 POWER_NETS = ["GND", "+9V", "+5V", "VSW_IN", "DC_IN", "BAT_P", "V_FILT", "AMP_OUT", "SPK_DRV", "SPK_P", "HP"]
 
-# ref -> (x, y, rotation_deg, side, anchor); anchor "center" = bbox centre, "top" = bbox top edge at y
+# ref -> (x, y, rotation_deg, side, anchor)
+# anchor: "center" = bbox centre, "top" = bbox top at y, "right" = bbox right edge at x, "origin" = fp origin
 PLACEMENT = {
     # top edge: jacks + panel controls
-    "J1": (15, 0.0, 180, "F", "top"), "SW1": (29, 7, 0, "F", "center"), "D2": (37, 7, 0, "F", "center"),
-    "RV3": (52, 9, 0, "F", "center"), "SW5": (66, 7, 0, "F", "center"), "SW2": (77, 7, 0, "F", "center"),
-    "SW3": (88, 7, 0, "F", "center"), "SW4": (107, 7, 0, "F", "center"), "RV1": (122, 9, 0, "F", "center"),
-    "J4": (138, 0.0, 0, "F", "top"), "J3": (182, 0.0, 0, "F", "top"),
-    # power
-    "D1": (16, 20, 0, "F", "center"), "C1": (10, 31, 0, "F", "center"), "C2": (19, 29, 90, "F", "center"),
-    "R1": (37, 16, 0, "F", "center"), "R2": (27, 24, 0, "F", "center"), "C3": (27, 32, 0, "F", "center"),
-    "U1": (37, 28, 0, "F", "center"), "C4": (37, 35, 0, "F", "center"), "C5": (19, 37, 0, "F", "center"),
-    "J2": (10, 44, 0, "B", "center"),
+    "J1": (12, 0.0, 180, "F", "top"), "SW1": (26, 7, 0, "F", "center"), "D2": (34, 7, 0, "F", "center"),
+    "RV3": (46, 9, 0, "F", "center"), "SW5": (60, 7, 0, "F", "center"), "SW2": (71, 7, 0, "F", "center"),
+    "SW3": (82, 7, 0, "F", "center"), "SW4": (93, 7, 0, "F", "center"), "RV1": (108, 9, 0, "F", "center"),
+    "J4": (126, 0.0, 0, "F", "top"), "J3": (170.0, 62, 270, "F", "right"),
     # vibrato LFO
-    "U5": (58, 28, 0, "F", "center"), "C17": (49, 21, 90, "F", "center"), "R10": (72, 19, 0, "F", "center"),
-    "R11": (72, 23, 0, "F", "center"), "R12": (72, 27, 0, "F", "center"), "R13": (72, 31, 0, "F", "center"),
-    "RV2": (72, 37, 0, "F", "center"), "C18": (48, 38, 0, "F", "center"), "C19": (81, 23, 0, "F", "center"),
-    "R14": (58, 39, 0, "F", "center"), "C20": (81, 31, 0, "F", "center"),
+    "U5": (18, 30, 0, "F", "center"), "C17": (9, 22, 90, "F", "center"), "R10": (31, 21, 0, "F", "center"),
+    "R11": (31, 25, 0, "F", "center"), "R12": (31, 29, 0, "F", "center"), "R13": (31, 33, 0, "F", "center"),
+    "RV2": (31, 38.5, 0, "F", "center"), "C18": (8.5, 37.5, 0, "F", "center"), "C19": (43, 23, 0, "F", "center"),
+    "R14": (43, 37.5, 0, "F", "center"), "C20": (43, 30, 0, "F", "center"),
     # octave divider
-    "U3": (93, 29, 0, "F", "center"), "C9": (100, 19, 90, "F", "center"),
+    "U3": (57, 30, 0, "F", "center"), "C9": (65, 22, 90, "F", "center"),
     # audio + amp
-    "R7": (110, 19, 0, "F", "center"), "C10": (110, 25, 0, "F", "center"), "C11": (110, 31, 0, "F", "center"),
-    "U4": (124, 28, 0, "F", "center"), "C12": (117, 38, 0, "F", "center"), "C13": (134, 27, 0, "F", "center"),
-    "C14": (134, 35, 90, "F", "center"), "R8": (139.5, 31, 90, "F", "center"), "C15": (141, 38, 0, "F", "center"),
-    "C16": (146, 24, 0, "F", "center"), "R9": (152, 34, 90, "F", "center"), "J5": (190, 45, 0, "B", "center"),
-    # oscillator
-    "U2": (166, 29, 0, "F", "center"), "C6": (158, 20, 90, "F", "center"), "C7": (178, 26, 0, "F", "center"),
-    "R3": (178, 31, 0, "F", "center"), "R4": (160, 37, 0, "F", "center"), "R5": (160, 40.5, 0, "F", "center"),
-    "C8": (178, 37, 0, "F", "center"), "R6": (190, 25, 90, "F", "center"),
+    "R7": (75, 21, 0, "F", "center"), "C10": (75, 27, 0, "F", "center"), "C11": (75, 33, 0, "F", "center"),
+    "U4": (89, 30, 0, "F", "center"), "C12": (83, 39, 0, "F", "center"), "C13": (100, 23, 0, "F", "center"),
+    "C14": (100, 35, 90, "F", "center"), "R8": (106.5, 30, 90, "F", "center"), "C15": (107, 39, 0, "F", "center"),
+    "C16": (114, 24, 0, "F", "center"), "R9": (114.5, 34, 90, "F", "center"), "J5": (126, 31, 0, "B", "center"),
+    # oscillator (right of the keyboard)
+    "U2": (147, 30, 0, "F", "center"), "C6": (139, 22, 90, "F", "center"), "C7": (160, 23, 0, "F", "center"),
+    "R3": (160, 29, 0, "F", "center"), "R4": (160, 34, 0, "F", "center"), "R5": (160, 38.5, 0, "F", "center"),
+    "RV5": (158, 45, 0, "F", "center"), "C8": (139, 38, 90, "F", "center"), "R6": (157, 53, 0, "F", "center"),
+    "RV4": (143, 50, 0, "F", "center"),
+    # power (left of the keyboard)
+    "D1": (17, 47, 0, "F", "center"), "C1": (11, 57, 0, "F", "center"), "C2": (24, 57, 90, "F", "center"),
+    "R1": (18, 63.5, 0, "F", "center"), "R2": (18, 68, 0, "F", "center"), "C3": (10, 75, 0, "F", "center"),
+    "U1": (21, 75, 0, "F", "center"), "C4": (29, 75, 0, "F", "center"), "C5": (18, 83, 0, "F", "center"),
+    "J2": (16, 93, 0, "B", "center"),
     # keys
     "K1": (KEYPAD_ORIGIN[0], KEYPAD_ORIGIN[1], 0, "F", "origin"),
     # mounting holes
-    "H1": (4, 4, 0, "F", "center"), "H2": (196, 4, 0, "F", "center"), "H3": (4, 116, 0, "F", "center"),
-    "H4": (196, 116, 0, "F", "center"), "H5": (100, 114.5, 0, "F", "center"), "H6": (196, 60, 0, "F", "center"),
+    "H1": (4, 4, 0, "F", "center"), "H2": (166, 4, 0, "F", "center"), "H3": (4, 104, 0, "F", "center"),
+    "H4": (166, 104, 0, "F", "center"), "H5": (85, 104, 0, "F", "center"), "H6": (164, 84, 0, "F", "center"),
 }
+_VIA_X = {n: g["via_x"] for n, _note, _kind, g in gen_keypad.layout()[0]}
 for seg in circuit.LADDER["segments"]:
-    x = KEY_X0 + (seg["key"] - 1) * KEY_PITCH
-    PLACEMENT[f"R{101 + seg['segment']}"] = (x, 45.5, 90, "F", "center")
-    PLACEMENT[f"RV{101 + seg['segment']}"] = (x, 54.5, 90, "F", "center")
+    PLACEMENT[f"R{101 + seg['segment']}"] = (KEYPAD_ORIGIN[0] + _VIA_X[seg["key"]],
+                                             LADDER_ROWS[seg["key"] % 2], 90, "F", "center")
 
 SILK_TEXT = [  # (text, x, y, size_mm)
-    ("StyloSynth-555", 40, 112, 3.0), ("v1.0", 170, 112, 1.5),
-    ("POWER", 22, 14.5, 1.2), ("VIBRATO LFO", 64, 16.0, 1.2), ("OCTAVE", 93, 16.0, 1.2),
-    ("AMP", 124, 16.0, 1.2), ("OSCILLATOR", 166, 16.0, 1.2),
-    ("TUNING: set key 20 (E) first, then work leftwards", 100, 61.0, 1.2),
-    ("9V DC (-)", 15, 17.0, 1.0), ("ON", 29, 11.5, 1.0), ("DEPTH", 52, 17.0, 1.0), ("VIB", 66, 11.5, 1.0),
-    ("OCT-1", 77, 11.5, 1.0), ("OCT-2", 88, 11.5, 1.0), ("SOFT", 107, 11.5, 1.0), ("VOLUME", 122, 17.0, 1.0),
-    ("PHONES", 138, 20.5, 1.0), ("STYLUS", 182, 20.5, 1.0), ("RATE", 72, 40.5, 1.0),
+    ("StyloSynth-555", 60, 101.5, 2.5), ("v1.1", 112, 101.5, 1.5),
+    ("VIBRATO LFO", 25, 17.5, 1.2), ("OCTAVE", 57, 17.5, 1.2), ("AMP", 92, 17.5, 1.2),
+    ("OSCILLATOR", 150, 17.5, 1.2), ("POWER", 17, 43, 1.2),
+    ("9V DC (-)", 12, 16.0, 1.0), ("ON", 26, 11.5, 1.0), ("DEPTH", 46, 16.5, 1.0), ("VIB", 60, 11.5, 1.0),
+    ("OCT-1", 71, 11.5, 1.0), ("OCT-2", 82, 11.5, 1.0), ("SOFT", 93, 11.5, 1.0), ("VOLUME", 108, 16.5, 1.0),
+    ("PHONES", 126, 20.5, 1.0), ("STYLUS", 160, 69, 1.0), ("RATE", 31, 42, 1.0),
+    ("TUNE (key 20)", 143, 54.5, 1.0), ("SPAN (key 1)", 158, 49.5, 1.0),
 ]
 
 
@@ -174,7 +177,7 @@ def place_fp(fp, x, y, rot, side, anchor):
     bb = fp.GetBoundingBox(False, False)
     cx, top = bb.GetCenter().x, bb.GetTop()
     dy = mm(ORIGIN[1] + y) - (top if anchor == "top" else bb.GetCenter().y)
-    dx = mm(ORIGIN[0] + x) - cx
+    dx = mm(ORIGIN[0] + x) - (bb.GetRight() if anchor == "right" else cx)
     fp.SetPosition(pcbnew.VECTOR2I(fp.GetPosition().x + dx, fp.GetPosition().y + dy))
 
 
@@ -254,7 +257,7 @@ def stage_place():
         add_text(board, text, x, y, size)
     # keep GND pour out from between the exposed keys
     add_zone(board, pcbnew.F_Cu, None, rule_area=True,
-             rect=(KEYPAD_ORIGIN[0] - 82, KEYPAD_ORIGIN[1] - 1, KEYPAD_ORIGIN[0] + 82, KEYPAD_ORIGIN[1] + 42))
+             rect=(KEYPAD_ORIGIN[0] - 2, KEYPAD_ORIGIN[1] - 4, KEYPAD_ORIGIN[0] + 98, KEYPAD_ORIGIN[1] + 40))
     board.BuildConnectivity()
     pcbnew.SaveBoard(str(PCB), board)
     if not pcbnew.ExportSpecctraDSN(board, str(DSN)):

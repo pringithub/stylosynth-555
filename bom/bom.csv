@@ -22,37 +22,38 @@ Qty,References,Value,Description,Footprint,Manufacturer,MPN,Verify,Est. unit USD
 1,R2,47,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,47 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
 1,R3,10M,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,10M metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
 1,R4,1k5,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,1k5 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R5,3k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,3k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R5,2k4,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,2k4 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
 1,R6,100,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,100 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
 1,R7,150k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,150k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
 1,R8,10,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,10 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
 1,R9,220,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,220 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
 3,"R10, R11, R12",100k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,100k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.09
 1,R13,68k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Yageo / generic,68k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R101,9.1k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,9.1k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R102,220,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,220 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R103,270,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,270 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R104,300,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,300 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R105,360,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,360 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R106,430,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,430 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R107,470,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,470 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R108,510,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,510 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R109,560,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,560 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R110,620,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,620 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R111,680,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,680 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R112,750,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,750 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R113,820,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,820 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R114,910,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,910 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R115,1k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R116,1.1k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1.1k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-1,R117,1.2k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1.2k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
-2,"R118, R119",1.3k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1.3k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.06
-1,R120,1.5k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1.5k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R101,11k3,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,11k3 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R102,750,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,750 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R103,787,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,787 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R104,845,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,845 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R105,887,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,887 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R106,953,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,953 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R107,1k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R108,1k05,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k05 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R109,1k13,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k13 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R110,1k18,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k18 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R111,1k27,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k27 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R112,1k33,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k33 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R113,1k4,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k4 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R114,1k5,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k5 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R115,1k58,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k58 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R116,1k69,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k69 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R117,1k78,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k78 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R118,1k87,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,1k87 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R119,2k,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,2k metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
+1,R120,2k15,"Resistor, metal film 1% 0.25W",R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical,Yageo / generic,2k15 metal film 1% 0.25 W (e.g. Yageo MFR-25 series),no,0.03,0.03
 1,RV1,A10k,"Potentiometer 9mm vertical, 10k log, Alps RK09K",Potentiometer_Alps_RK09K_Single_Vertical,Alps Alpine / generic,"RK09K series 9 mm vertical, 10k log (A10K), 15 mm shaft",yes,1.50,1.50
 1,RV2,100k,"Trimmer 25-turn, Bourns 3296W (vibrato rate)",Potentiometer_Bourns_3296W_Vertical,Bourns,3296W-1-104LF,no,1.60,1.60
 1,RV3,B10k,"Potentiometer 9mm vertical, 10k linear, Alps RK09K",Potentiometer_Alps_RK09K_Single_Vertical,Alps Alpine / generic,"RK09K series 9 mm vertical, 10k lin (B10K), 15 mm shaft",yes,1.50,1.50
-1,RV101,5k,"Trimmer 25-turn, Bourns 3296W",Potentiometer_Bourns_3296W_Vertical,Bourns,3296W-1-502LF,no,1.60,1.60
-19,"RV102, RV103, RV104, RV105, RV106, RV107, RV108, RV109, RV110, RV111, RV112, RV113, RV114, RV115, RV116, RV117, RV118, RV119, RV120",1k,"Trimmer 25-turn, Bourns 3296W",Potentiometer_Bourns_3296W_Vertical,Bourns,3296W-1-102LF,no,1.60,30.40
+1,RV4,2k,"Trimmer 25-turn, Bourns 3296W (TUNE calibration)",Potentiometer_Bourns_3296W_Vertical,Bourns,3296W-1-202LF,no,1.60,1.60
+1,RV5,1k,"Trimmer 25-turn, Bourns 3296W (SPAN calibration)",Potentiometer_Bourns_3296W_Vertical,Bourns,3296W-1-102LF,no,1.60,1.60
 1,SW1,POWER,"Slide switch DPDT, C&K JS202011CQN",SW_CK_JS202011CQN_DPDT_Straight,C&K,JS202011CQN,no,0.60,0.60
 1,SW2,OCT -1,"Slide switch DPDT, C&K JS202011CQN",SW_CK_JS202011CQN_DPDT_Straight,C&K,JS202011CQN,no,0.60,0.60
 1,SW3,OCT -2,"Slide switch DPDT, C&K JS202011CQN",SW_CK_JS202011CQN_DPDT_Straight,C&K,JS202011CQN,no,0.60,0.60

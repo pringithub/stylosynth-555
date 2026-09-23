@@ -10,16 +10,16 @@ soldered from the front, so their cables stay inside the enclosure.
 - Check the parts against [bom/bom.md](../bom/bom.md).
 
 ## Solder order (lowest parts first)
-1. **Resistors, horizontal:** R1–R14. The ladder resistors R101–R120 stand **vertically**
-   (body over the round pad, lead bent back to the second pad).
+1. **Resistors, horizontal:** R1–R14. The ladder resistors R101–R120 (1 % E96 values, check each
+   with a meter; they set the key pitches) stand **vertically**: body over the round pad, lead bent
+   back to the second pad.
 2. **Diode D1** (1N5819): the band goes to the "K" end marked on the silkscreen.
 3. **Ceramic caps:** C2, C5, C6, C8, C9, C14, C15, C17.
 4. **IC sockets:** U2, U4, U5 (DIP-8) and U3 (DIP-16). Match the notch to the silkscreen.
    Do not insert the ICs yet.
 5. **Film caps:** C7 (22 nF polypropylene: the tuning reference, use the good one), C10, C11, C18.
 6. **U1** LP2950-5.0 (TO-92): the flat face matches the silkscreen.
-7. **Trimmers:** RV101 (5k), RV102–RV120 (1k), RV2 (100k). The adjust screws should all face the
-   same way for easy tuning.
+7. **Trimmers:** RV4 TUNE (2k), RV5 SPAN (1k), RV2 RATE (100k).
 8. **Electrolytics:** C1, C3, C4, C12, C13, C16, C19, C20. **Polarity:** the long lead goes in the "+"
    pad (the square pad).
 9. **LED D2:** long lead (anode) to the round "A" pad, flat side (cathode) to the square pad.

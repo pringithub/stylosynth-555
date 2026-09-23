@@ -36,7 +36,7 @@ SOURCING = [
     (("A10k", ""), ("Alps Alpine / generic", "RK09K series 9 mm vertical, 10k log (A10K), 15 mm shaft", 1.50, "yes")),
     (("B10k", ""), ("Alps Alpine / generic", "RK09K series 9 mm vertical, 10k lin (B10K), 15 mm shaft", 1.50, "yes")),
     (("1k", "3296W"), ("Bourns", "3296W-1-102LF", 1.60, "no")),
-    (("5k", "3296W"), ("Bourns", "3296W-1-502LF", 1.60, "no")),
+    (("2k", "3296W"), ("Bourns", "3296W-1-202LF", 1.60, "no")),
     (("100k", "3296W"), ("Bourns", "3296W-1-104LF", 1.60, "no")),
     (("22n", "C_Rect"), ("WIMA", "MKP2 22nF 100V 2.5% 5 mm (polypropylene)", 0.60, "yes")),
     (("47n", "C_Rect"), ("WIMA", "MKS2 47nF 63V 5 mm", 0.35, "yes")),

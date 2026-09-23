@@ -50,6 +50,11 @@ class Part:
 PARTS: list[Part] = []
 
 
+def fmt_ohm(r):
+    s = f"{r / 1e3:g}k" if r >= 1e3 else f"{r:g}"
+    return s.replace(".", "k")[:-1] if "." in s and s.endswith("k") else s
+
+
 def add(ref, lib_id, value, footprint, pins, block, desc="", mpn=""):
     PARTS.append(Part(ref, lib_id, value, footprint, {str(k): v for k, v in pins.items()}, block, desc, mpn))
 
@@ -100,7 +105,9 @@ C("C6", "100n", "+5V", "GND", B)
 C("C7", "22n", "TH", "GND", B, FP_C_FILM, "Capacitor, polypropylene film 22nF 2.5% 100V (timing)")
 R("R3", "10M", "TH", "GND", B)
 R("R4", "1k5", "+5V", "CV", B)
-R("R5", "3k", "CV", "GND", B)
+R("R5", fmt_ohm(LADDER["cv_r_bot_fixed_ohm"]), "CV", "CV_LO", B)
+add("RV5", "Device:R_Potentiometer_Trim", fmt_ohm(LADDER["span_trimmer_ohm"]), FP_TRIM,
+    {1: "CV_LO", 2: "GND", 3: "GND"}, B, "Trimmer 25-turn, Bourns 3296W (SPAN calibration)", "3296W-1-102LF")
 C("C8", "10n", "CV", "GND", B)
 R("R6", "100", "STYLUS", "TH", B)
 add("J3", "Connector_Audio:AudioJack3_SwitchTR", "STYLUS", FP_JACK35,
@@ -112,10 +119,13 @@ B = "Keys"
 prev = "OSC_OUT"
 for seg in LADDER["segments"]:
     i, key = seg["segment"], seg["key"]
-    mid, node = f"LAD{i}", f"KEY{key}"
-    R(f"R{101 + i}", seg["r_fixed"], prev, mid, B, FP_R_VERT)
-    add(f"RV{101 + i}", "Device:R_Potentiometer_Trim", seg["trimmer"], FP_TRIM,
-        {1: mid, 2: node, 3: node}, B, "Trimmer 25-turn, Bourns 3296W", f"3296W-1-{seg['trimmer_ohm']:.0f}")
+    node = f"KEY{key}"
+    if i == 0:
+        R("R101", seg["r_fixed"], prev, "LAD0", B, FP_R_VERT)
+        add("RV4", "Device:R_Potentiometer_Trim", fmt_ohm(LADDER["tune_trimmer_ohm"]), FP_TRIM,
+            {1: "LAD0", 2: node, 3: node}, B, "Trimmer 25-turn, Bourns 3296W (TUNE calibration)", "3296W-1-202LF")
+    else:
+        R(f"R{101 + i}", seg["r_fixed"], prev, node, B, FP_R_VERT)
     prev = node
 add("K1", "Connector_Generic:Conn_01x20", "KEYPAD", FP_KEYPAD,
     {k: f"KEY{k}" for k in range(1, 21)}, B, "20 exposed ENIG key pads (PCB feature, not a part)")

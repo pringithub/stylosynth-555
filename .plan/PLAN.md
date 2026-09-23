@@ -11,10 +11,10 @@ files are reused. Only the published feature set and the lessons it documents ca
 | Phase | Status |
 |---|---|
 | 0 Setup | done: git, `.venv` (system Python 3.12 with KiCad `pcbnew`), Freerouting 2.1.0 in `tools/` |
-| 1 Calc & sim | done: `calc_ladder.py`, `sim/run_sims.py` all PASS (ladder ±0.9 % model error, LFO 3.9–9.5 Hz, vibrato ±46 cents, LM386 3.35 V pk at full volume) |
+| 1 Calc & sim | done: `calc_ladder.py` (+ Monte Carlo), `sim/run_sims.py` all PASS (ngspice vs model spread 0.5 cents, calibrated tuning p95 ±3.6 cents, LFO 3.9–9.5 Hz, vibrato ±46 cents, LM386 3.35 V pk at full volume) |
 | 2 Schematic | done: generated from `circuit.py`; exported netlist matches the source exactly (`verify_netlist.py`) |
-| 3 PCB | in progress: placement is DRC-clean, autorouting under way |
-| 4 BOM | done: `bom/bom.md` / `bom.csv` (≈ $79 per unit, estimates) |
+| 3 PCB | in progress: v1.1 170 × 108 mm with a piano-layout keyboard, placement DRC-clean, autorouting under way |
+| 4 BOM | done: `bom/bom.md` / `bom.csv` (≈ $50 per unit, estimates) |
 | 5 Enclosure | **deferred: to be modelled in Blender later (user request); CadQuery dropped** |
 | 6 Fab & docs | assembly/tuning docs written; fab export pending routing |
 
@@ -27,6 +27,11 @@ Deviations from the original plan:
   library has no 1P4T footprint. It still gives 4 exact octaves.
 - **Vibrato rate** is a board trimmer (RV2); DEPTH is the panel pot.
 - **Schematic** is a single flat A1 sheet with framed blocks, not hierarchical sheets.
+- **v1.1 (user feedback): no per-key trimmers.**
+  - The ladder is 20 fixed 1 % E96 resistors, chosen greedily on the cumulative resistance so rounding never accumulates.
+  - Two-point calibration uses TUNE (RV4, a series offset set on key 20) and SPAN (RV5, the CV divider, which scales all notes, set on key 1).
+  - This removes 19 trimmers (about $30).
+- **v1.1 keyboard:** a compact Stylophone/piano layout, 96 × 36 mm: 12 notched naturals plus 8 raised sharps (was 164 mm wide in a single row).
 
 ---
 
