@@ -1,894 +1,968 @@
 ** Drc report for /home/pring5/Projects/Personal/Active/pcb_synthesizer/hardware/kicad/stylosynth.kicad_pcb **
-** Created on 2026-09-23 12:46:50 **
+** Created on 2026-09-23 13:08:57 **
 
-** Found 91 DRC violations **
+** Found 110 DRC violations **
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; Severity: warning
-    @(112.1500 mm, 80.2700 mm): Line on F.Silkscreen
-    @(112.5000 mm, 62.0000 mm): Reference 'C9'
+    @(168.0000 mm, 72.0450 mm): Circle on F.Silkscreen
+    @(169.1300 mm, 70.7750 mm): Reference 'R5'
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; Severity: warning
-    @(75.0000 mm, 57.5000 mm): PCB Text 'VIBRATO LFO' on F.Silkscreen
-    @(81.0000 mm, 58.6300 mm): Reference 'R10'
+    @(161.1500 mm, 72.2100 mm): Line on F.Silkscreen
+    @(161.5000 mm, 65.0000 mm): Reference 'C6'
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; Severity: warning
-    @(81.0000 mm, 62.6300 mm): Reference 'R11'
-    @(77.7300 mm, 62.3700 mm): Line on F.Silkscreen
+    @(172.6000 mm, 60.5000 mm): PCB Text 'STYLUS' on F.Silkscreen
+    @(171.0000 mm, 61.0000 mm): Reference 'C7'
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; Severity: warning
-    @(77.7300 mm, 66.3700 mm): Line on F.Silkscreen
-    @(81.0000 mm, 66.6300 mm): Reference 'R12'
+    @(174.6300 mm, 64.7750 mm): Reference 'R3'
+    @(174.7200 mm, 62.1300 mm): Line on F.Silkscreen
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; Severity: warning
-    @(81.0000 mm, 70.6300 mm): Reference 'R13'
-    @(77.7300 mm, 70.3700 mm): Line on F.Silkscreen
+    @(134.5000 mm, 77.0000 mm): Reference 'C15'
+    @(133.0000 mm, 77.0450 mm): Circle on F.Silkscreen
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; Severity: warning
-    @(77.7300 mm, 74.3700 mm): Line on F.Silkscreen
-    @(81.0100 mm, 74.8400 mm): Reference 'RV2'
+    @(58.8700 mm, 71.2100 mm): Line on F.Silkscreen
+    @(63.5000 mm, 71.5000 mm): Reference 'C18'
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; Severity: warning
-    @(133.8700 mm, 64.8100 mm): Line on F.Silkscreen
-    @(133.0449 mm, 75.2500 mm): Reference 'C12'
+    @(61.3600 mm, 71.1500 mm): Line on F.Silkscreen
+    @(63.5000 mm, 71.5000 mm): Reference 'C18'
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; Severity: warning
-    @(133.8700 mm, 75.2100 mm): Line on F.Silkscreen
-    @(133.0449 mm, 75.2500 mm): Reference 'C12'
+    @(84.1300 mm, 64.7750 mm): Reference 'R14'
+    @(83.0000 mm, 66.0450 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(64.0100 mm, 78.3400 mm): Reference 'RV2'
+    @(59.7800 mm, 78.3700 mm): Line on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(59.1250 mm, 84.5400 mm): Line on F.Silkscreen
+    @(62.0973 mm, 84.7500 mm): Reference 'C1'
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(73.6300 mm, 64.7750 mm): Reference 'R11'
+    @(72.5000 mm, 66.0450 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(76.0000 mm, 66.0450 mm): Circle on F.Silkscreen
+    @(77.1300 mm, 64.7750 mm): Reference 'R12'
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(80.6300 mm, 64.7750 mm): Reference 'R13'
+    @(79.5000 mm, 66.0450 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(123.6300 mm, 89.2750 mm): Reference 'R109'
+    @(122.0000 mm, 90.5450 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(126.0000 mm, 90.5450 mm): Circle on F.Silkscreen
+    @(127.6300 mm, 89.2750 mm): Reference 'R108'
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(151.6300 mm, 89.2750 mm): Reference 'R103'
+    @(150.0000 mm, 90.5450 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(155.6300 mm, 89.2750 mm): Reference 'R102'
+    @(154.0000 mm, 90.5450 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(110.0000 mm, 76.0000 mm): Reference 'C11'
+    @(110.3700 mm, 79.7200 mm): Line on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(101.1500 mm, 82.2700 mm): Line on F.Silkscreen
+    @(101.5000 mm, 66.0000 mm): Reference 'C9'
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(119.6300 mm, 89.2750 mm): Reference 'R110'
+    @(118.0000 mm, 90.5450 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(95.6300 mm, 89.2750 mm): Reference 'R115'
+    @(94.0000 mm, 90.5450 mm): Circle on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(98.0000 mm, 90.5450 mm): Circle on F.Silkscreen
+    @(99.6300 mm, 89.2750 mm): Reference 'R114'
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; Severity: warning
+    @(130.0000 mm, 90.5450 mm): Circle on F.Silkscreen
+    @(131.6300 mm, 89.2750 mm): Reference 'R107'
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; Severity: warning
-    @(62.0000 mm, 56.0000 mm): PCB Text '9V DC (-)' on F.Silkscreen
-[lib_footprint_issues]: Footprint 'C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2' not found in library 'Capacitor_THT'.
+    @(174.6300 mm, 64.7750 mm): Reference 'R3'
+[silk_over_copper]: Silkscreen clipped by solder mask
     Local override; Severity: warning
-    @(207.5000 mm, 63.0000 mm): Footprint C7
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    @(73.6300 mm, 64.7750 mm): Reference 'R11'
+[silk_over_copper]: Silkscreen clipped by solder mask
     Local override; Severity: warning
-    @(175.0000 mm, 91.5450 mm): Footprint R102
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
+    @(84.1300 mm, 64.7750 mm): Reference 'R14'
+[silk_over_copper]: Silkscreen clipped by solder mask
     Local override; Severity: warning
-    @(64.1900 mm, 103.5000 mm): Footprint R1
-[lib_footprint_issues]: Footprint 'LED_D3.0mm' not found in library 'LED_THT'.
+    @(77.1300 mm, 64.7750 mm): Reference 'R12'
+[silk_over_copper]: Silkscreen clipped by solder mask
     Local override; Severity: warning
-    @(82.7250 mm, 47.0000 mm): Footprint D2
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    @(80.6300 mm, 64.7750 mm): Reference 'R13'
+[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
     Local override; Severity: warning
-    @(105.6500 mm, 86.0450 mm): Footprint R117
-[lib_footprint_issues]: Footprint 'MountingHole_3.2mm_M3' not found in library 'MountingHole'.
-    Local override; Severity: warning
-    @(216.0000 mm, 44.0000 mm): Footprint H2
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(100.3500 mm, 91.5450 mm): Footprint R118
-[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(189.0000 mm, 64.5000 mm): Footprint C6
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(171.0000 mm, 86.0450 mm): Footprint R103
-[lib_footprint_issues]: Footprint 'MountingHole_3.2mm_M3' not found in library 'MountingHole'.
-    Local override; Severity: warning
-    @(214.0000 mm, 124.0000 mm): Footprint H6
+    @(121.3000 mm, 44.3575 mm): Footprint SW3
 [lib_footprint_issues]: Footprint 'Jack_3.5mm_CUI_SJ1-3535NG_Horizontal' not found in library 'Connector_Audio'.
     Local override; Severity: warning
-    @(175.9000 mm, 45.7250 mm): Footprint J4
-[lib_footprint_issues]: Footprint 'CP_Radial_D5.0mm_P2.00mm' not found in library 'Capacitor_THT'.
+    @(161.5000 mm, 45.7250 mm): Footprint J4
+[lib_footprint_issues]: Footprint 'MountingHole_3.2mm_M3' not found in library 'MountingHole'.
     Local override; Severity: warning
-    @(92.0449 mm, 63.0000 mm): Footprint C19
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(161.6500 mm, 86.0450 mm): Footprint R105
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(115.0000 mm, 86.0450 mm): Footprint R115
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(77.1900 mm, 65.0000 mm): Footprint R11
-[lib_footprint_issues]: Footprint 'DIP-8_W7.62mm_Socket' not found in library 'Package_DIP'.
-    Local override; Severity: warning
-    @(193.2000 mm, 66.2000 mm): Footprint U2
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(206.1900 mm, 78.5000 mm): Footprint R5
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(156.3500 mm, 91.5450 mm): Footprint R106
-[lib_footprint_issues]: Footprint 'DIP-8_W7.62mm_Socket' not found in library 'Package_DIP'.
-    Local override; Severity: warning
-    @(64.2000 mm, 66.2000 mm): Footprint U5
-[lib_footprint_issues]: Footprint 'BarrelJack_CUI_PJ-102AH_Horizontal' not found in library 'Connector_BarrelJack'.
-    Local override; Severity: warning
-    @(62.7500 mm, 54.2250 mm): Footprint J1
-[lib_footprint_issues]: Footprint 'DIP-16_W7.62mm_Socket' not found in library 'Package_DIP'.
-    Local override; Severity: warning
-    @(103.2000 mm, 61.1000 mm): Footprint U3
-[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
-    Local override; Severity: warning
-    @(129.5000 mm, 45.3575 mm): Footprint SW3
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(77.1900 mm, 61.0000 mm): Footprint R10
-[lib_footprint_issues]: Footprint 'Potentiometer_Bourns_3296W_Vertical' not found in library 'Potentiometer_THT'.
-    Local override; Severity: warning
-    @(195.5500 mm, 90.0000 mm): Footprint RV4
-[lib_footprint_issues]: Footprint 'CP_Radial_D6.3mm_P2.50mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(58.8176 mm, 115.0000 mm): Footprint C3
+    @(182.0000 mm, 86.0000 mm): Footprint H2
 [lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
     Local override; Severity: warning
-    @(115.0000 mm, 64.5000 mm): Footprint C9
-[lib_footprint_issues]: Footprint 'Potentiometer_Bourns_3296W_Vertical' not found in library 'Potentiometer_THT'.
-    Local override; Severity: warning
-    @(83.5500 mm, 78.5000 mm): Footprint RV2
-[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(65.5000 mm, 123.0000 mm): Footprint C5
+    @(137.0000 mm, 79.5000 mm): Footprint C15
 [lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
     Local override; Severity: warning
-    @(135.0000 mm, 86.0450 mm): Footprint R111
-[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
-    Local override; Severity: warning
-    @(118.5000 mm, 45.3575 mm): Footprint SW2
-[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(189.0000 mm, 80.5000 mm): Footprint C8
-[lib_footprint_issues]: Footprint 'CP_Radial_D8.0mm_P3.50mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(162.3473 mm, 64.0000 mm): Footprint C16
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(77.1900 mm, 73.0000 mm): Footprint R13
-[lib_footprint_issues]: Footprint 'CP_Radial_D5.0mm_P2.00mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(78.0449 mm, 115.0000 mm): Footprint C4
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(164.5000 mm, 77.8100 mm): Footprint R9
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(206.1900 mm, 74.0000 mm): Footprint R4
-[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
-    Local override; Severity: warning
-    @(140.5000 mm, 45.3575 mm): Footprint SW4
+    @(177.0000 mm, 66.0450 mm): Footprint R3
 [lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
     Local override; Severity: warning
-    @(119.0000 mm, 91.5450 mm): Footprint R114
+    @(108.5000 mm, 66.0450 mm): Footprint R7
 [lib_footprint_issues]: Footprint 'C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2' not found in library 'Capacitor_THT'.
     Local override; Severity: warning
-    @(122.5000 mm, 67.0000 mm): Footprint C10
-[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(74.0000 mm, 99.5000 mm): Footprint C2
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(77.1900 mm, 69.0000 mm): Footprint R12
+    @(168.5000 mm, 64.0000 mm): Footprint C7
 [lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
     Local override; Severity: warning
-    @(129.6500 mm, 91.5450 mm): Footprint R112
+    @(183.0000 mm, 79.0450 mm): Footprint R6
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(150.0000 mm, 90.5450 mm): Footprint R104
+[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(164.0000 mm, 67.5000 mm): Footprint C6
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(133.0000 mm, 77.0450 mm): Footprint R8
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(112.6500 mm, 90.5450 mm): Footprint R112
+[lib_footprint_issues]: Footprint 'Potentiometer_Bourns_3296W_Vertical' not found in library 'Potentiometer_THT'.
+    Local override; Severity: warning
+    @(66.5500 mm, 82.0000 mm): Footprint RV2
+[lib_footprint_issues]: Footprint 'MountingHole_3.2mm_M3' not found in library 'MountingHole'.
+    Local override; Severity: warning
+    @(54.0000 mm, 134.0000 mm): Footprint H3
+[lib_footprint_issues]: Footprint 'Potentiometer_Alps_RK09K_Single_Vertical' not found in library 'Potentiometer_THT'.
+    Local override; Severity: warning
+    @(82.1500 mm, 45.5000 mm): Footprint RV3
+[lib_footprint_issues]: Footprint 'Jack_3.5mm_CUI_SJ1-3535NG_Horizontal' not found in library 'Connector_Audio'.
+    Local override; Severity: warning
+    @(172.5000 mm, 45.7250 mm): Footprint J3
+[lib_footprint_issues]: Footprint 'DIP-8_W7.62mm_Socket' not found in library 'Package_DIP'.
+    Local override; Severity: warning
+    @(152.2000 mm, 63.2000 mm): Footprint U2
 [lib_footprint_issues]: Footprint 'TO-92_Inline' not found in library 'Package_TO_SOT_THT'.
     Local override; Severity: warning
-    @(69.7300 mm, 115.3600 mm): Footprint U1
+    @(60.7300 mm, 109.3600 mm): Footprint U1
 [lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
     Local override; Severity: warning
-    @(124.3500 mm, 86.0450 mm): Footprint R113
-[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(59.0000 mm, 64.5000 mm): Footprint C17
+    @(83.3500 mm, 90.5450 mm): Footprint R118
 [lib_footprint_issues]: Footprint 'MountingHole_3.2mm_M3' not found in library 'MountingHole'.
     Local override; Severity: warning
-    @(216.0000 mm, 144.0000 mm): Footprint H4
-[lib_footprint_issues]: Footprint 'DIP-8_W7.62mm_Socket' not found in library 'Package_DIP'.
-    Local override; Severity: warning
-    @(135.2000 mm, 66.2000 mm): Footprint U4
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(64.1900 mm, 108.0000 mm): Footprint R2
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(151.0000 mm, 86.0450 mm): Footprint R107
-[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(150.0000 mm, 77.5000 mm): Footprint C14
-[lib_footprint_issues]: Footprint 'Potentiometer_Bourns_3296W_Vertical' not found in library 'Potentiometer_THT'.
-    Local override; Severity: warning
-    @(210.5500 mm, 85.0000 mm): Footprint RV5
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(167.0000 mm, 91.5450 mm): Footprint R104
-[lib_footprint_issues]: Footprint 'Potentiometer_Alps_RK09K_Single_Vertical' not found in library 'Potentiometer_THT'.
-    Local override; Severity: warning
-    @(151.9500 mm, 46.5000 mm): Footprint RV1
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(147.0000 mm, 91.5450 mm): Footprint R108
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(89.6500 mm, 91.5450 mm): Footprint R120
-[lib_footprint_issues]: Footprint 'CP_Radial_D6.3mm_P2.50mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(148.8176 mm, 63.0000 mm): Footprint C13
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(143.0000 mm, 86.0450 mm): Footprint R109
-[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
-    Local override; Severity: warning
-    @(107.5000 mm, 45.3575 mm): Footprint SW5
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(89.1900 mm, 77.5000 mm): Footprint R14
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(206.1900 mm, 69.0000 mm): Footprint R3
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(156.5000 mm, 73.8100 mm): Footprint R8
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(139.0000 mm, 91.5450 mm): Footprint R110
-[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
-    Local override; Severity: warning
-    @(73.5000 mm, 45.3575 mm): Footprint SW1
+    @(54.0000 mm, 63.0000 mm): Footprint H1
 [lib_footprint_issues]: Footprint 'MountingHole_3.2mm_M3' not found in library 'MountingHole'.
     Local override; Severity: warning
-    @(135.0000 mm, 144.0000 mm): Footprint H5
-[lib_footprint_issues]: Footprint 'CP_Radial_D8.0mm_P3.50mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(59.3473 mm, 97.0000 mm): Footprint C1
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(203.1900 mm, 93.0000 mm): Footprint R6
-[lib_footprint_issues]: Footprint 'MountingHole_3.2mm_M3' not found in library 'MountingHole'.
-    Local override; Severity: warning
-    @(54.0000 mm, 44.0000 mm): Footprint H1
+    @(182.0000 mm, 134.0000 mm): Footprint H4
 [lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
     Local override; Severity: warning
-    @(111.0000 mm, 91.5450 mm): Footprint R116
-[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
-    Local override; Severity: warning
-    @(154.5000 mm, 79.0000 mm): Footprint C15
-[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal' not found in library 'Resistor_THT'.
-    Local override; Severity: warning
-    @(121.1900 mm, 61.0000 mm): Footprint R7
+    @(76.0000 mm, 66.0450 mm): Footprint R11
 [lib_footprint_issues]: Footprint 'C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2' not found in library 'Capacitor_THT'.
     Local override; Severity: warning
-    @(122.5000 mm, 73.0000 mm): Footprint C11
+    @(113.0000 mm, 78.5000 mm): Footprint C11
+[lib_footprint_issues]: Footprint 'CP_Radial_D6.3mm_P2.50mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(129.3176 mm, 65.0000 mm): Footprint C13
 [lib_footprint_issues]: Footprint 'CP_Radial_D5.0mm_P2.00mm' not found in library 'Capacitor_THT'.
     Local override; Severity: warning
-    @(92.0449 mm, 70.0000 mm): Footprint C20
+    @(61.0449 mm, 117.0000 mm): Footprint C4
+[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
+    Local override; Severity: warning
+    @(99.3000 mm, 44.3575 mm): Footprint SW5
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(86.5000 mm, 66.0450 mm): Footprint R14
+[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(55.0000 mm, 126.5000 mm): Footprint C5
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(126.0000 mm, 90.5450 mm): Footprint R109
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(88.6500 mm, 90.5450 mm): Footprint R117
+[lib_footprint_issues]: Footprint 'CP_Radial_D6.3mm_P2.50mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(60.8176 mm, 100.0000 mm): Footprint C3
+[lib_footprint_issues]: Footprint 'DIP-8_W7.62mm_Socket' not found in library 'Package_DIP'.
+    Local override; Severity: warning
+    @(60.2000 mm, 62.2000 mm): Footprint U5
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(144.6500 mm, 90.5450 mm): Footprint R105
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(118.0000 mm, 90.5450 mm): Footprint R111
+[lib_footprint_issues]: Footprint 'DIP-8_W7.62mm_Socket' not found in library 'Package_DIP'.
+    Local override; Severity: warning
+    @(117.2000 mm, 63.2000 mm): Footprint U4
 [lib_footprint_issues]: Footprint 'CP_Radial_D5.0mm_P2.00mm' not found in library 'Capacitor_THT'.
     Local override; Severity: warning
-    @(132.0449 mm, 79.0000 mm): Footprint C12
-[lib_footprint_issues]: Footprint 'MountingHole_3.2mm_M3' not found in library 'MountingHole'.
+    @(83.5449 mm, 75.0000 mm): Footprint C20
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
     Local override; Severity: warning
-    @(54.0000 mm, 144.0000 mm): Footprint H3
+    @(94.0000 mm, 90.5450 mm): Footprint R116
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(78.0000 mm, 90.5450 mm): Footprint R119
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(158.0000 mm, 90.5450 mm): Footprint R102
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(122.0000 mm, 90.5450 mm): Footprint R110
+[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(128.0000 mm, 79.5000 mm): Footprint C14
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(142.0000 mm, 78.0450 mm): Footprint R9
 [lib_footprint_issues]: Footprint 'C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2' not found in library 'Capacitor_THT'.
     Local override; Severity: warning
-    @(56.0000 mm, 77.5000 mm): Footprint C18
-[lib_footprint_issues]: Footprint 'Jack_3.5mm_CUI_SJ1-3535NG_Horizontal' not found in library 'Connector_Audio'.
+    @(61.0000 mm, 75.5000 mm): Footprint C18
+[lib_footprint_issues]: Footprint 'CP_Radial_D8.0mm_P3.50mm' not found in library 'Capacitor_THT'.
     Local override; Severity: warning
-    @(214.2750 mm, 101.9000 mm): Footprint J3
+    @(138.3473 mm, 66.0000 mm): Footprint C16
 [lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
     Local override; Severity: warning
-    @(180.3500 mm, 86.0450 mm): Footprint R101
+    @(107.3500 mm, 90.5450 mm): Footprint R113
 [lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
     Local override; Severity: warning
-    @(95.0000 mm, 86.0450 mm): Footprint R119
-[lib_footprint_issues]: Footprint 'D_DO-41_SOD81_P10.16mm_Horizontal' not found in library 'Diode_THT'.
+    @(72.5000 mm, 66.0450 mm): Footprint R10
+[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
     Local override; Severity: warning
-    @(61.9200 mm, 87.0000 mm): Footprint D1
+    @(104.0000 mm, 68.5000 mm): Footprint C9
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(79.5000 mm, 66.0450 mm): Footprint R12
+[lib_footprint_issues]: Footprint 'DIP-16_W7.62mm_Socket' not found in library 'Package_DIP'.
+    Local override; Severity: warning
+    @(92.2000 mm, 63.1000 mm): Footprint U3
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(102.0000 mm, 90.5450 mm): Footprint R114
+[lib_footprint_issues]: Footprint 'Potentiometer_Bourns_3296W_Vertical' not found in library 'Potentiometer_THT'.
+    Local override; Severity: warning
+    @(173.0000 mm, 93.4500 mm): Footprint RV4
+[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(55.0000 mm, 102.5000 mm): Footprint C2
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(83.0000 mm, 66.0450 mm): Footprint R13
+[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(72.5000 mm, 78.5000 mm): Footprint C17
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(98.0000 mm, 90.5450 mm): Footprint R115
+[lib_footprint_issues]: Footprint 'CP_Radial_D5.0mm_P2.00mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(77.0449 mm, 75.0000 mm): Footprint C19
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(168.0000 mm, 72.0450 mm): Footprint R4
+[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
+    Local override; Severity: warning
+    @(66.3000 mm, 44.3575 mm): Footprint SW1
+[lib_footprint_issues]: Footprint 'CP_Radial_D5.0mm_P2.00mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(119.0449 mm, 78.0000 mm): Footprint C12
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(130.0000 mm, 90.5450 mm): Footprint R108
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(55.0000 mm, 110.0450 mm): Footprint R2
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(171.5000 mm, 72.0450 mm): Footprint R5
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(139.3500 mm, 90.5450 mm): Footprint R106
+[lib_footprint_issues]: Footprint 'Potentiometer_Bourns_3296W_Vertical' not found in library 'Potentiometer_THT'.
+    Local override; Severity: warning
+    @(175.5500 mm, 79.0000 mm): Footprint RV5
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(72.6500 mm, 90.5450 mm): Footprint R120
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(55.0000 mm, 118.0450 mm): Footprint R1
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(154.0000 mm, 90.5450 mm): Footprint R103
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(163.3500 mm, 90.5450 mm): Footprint R101
+[lib_footprint_issues]: Footprint 'CP_Radial_D8.0mm_P3.50mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(60.3473 mm, 90.0000 mm): Footprint C1
+[lib_footprint_issues]: Footprint 'C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(108.5000 mm, 78.5000 mm): Footprint C10
+[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
+    Local override; Severity: warning
+    @(132.3000 mm, 44.3575 mm): Footprint SW4
+[lib_footprint_issues]: Footprint 'BarrelJack_CUI_PJ-102AH_Horizontal' not found in library 'Connector_BarrelJack'.
+    Local override; Severity: warning
+    @(57.5500 mm, 54.2250 mm): Footprint J1
+[lib_footprint_issues]: Footprint 'LED_D3.0mm' not found in library 'LED_THT'.
+    Local override; Severity: warning
+    @(76.2250 mm, 46.0000 mm): Footprint D2
+[lib_footprint_issues]: Footprint 'D_DO-41_SOD81_P5.08mm_Vertical_KathodeUp' not found in library 'Diode_THT'.
+    Local override; Severity: warning
+    @(55.0000 mm, 92.7578 mm): Footprint D1
+[lib_footprint_issues]: Footprint 'R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' not found in library 'Resistor_THT'.
+    Local override; Severity: warning
+    @(134.0000 mm, 90.5450 mm): Footprint R107
+[lib_footprint_issues]: Footprint 'C_Disc_D5.0mm_W2.5mm_P5.00mm' not found in library 'Capacitor_THT'.
+    Local override; Severity: warning
+    @(174.5000 mm, 72.0000 mm): Footprint C8
 [lib_footprint_issues]: Footprint 'Potentiometer_Alps_RK09K_Single_Vertical' not found in library 'Potentiometer_THT'.
     Local override; Severity: warning
-    @(89.9500 mm, 46.5000 mm): Footprint RV3
+    @(142.1500 mm, 45.5000 mm): Footprint RV1
+[lib_footprint_issues]: Footprint 'SW_CK_JS202011CQN_DPDT_Straight' not found in library 'Button_Switch_THT'.
+    Local override; Severity: warning
+    @(110.3000 mm, 44.3575 mm): Footprint SW2
 [lib_footprint_issues]: Footprint 'JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical' not found in library 'Connector_JST'.
     Local override; Severity: warning
-    @(64.7500 mm, 133.5250 mm): Footprint J2
+    @(61.2500 mm, 127.5250 mm): Footprint J2
 [lib_footprint_issues]: Footprint 'JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical' not found in library 'Connector_JST'.
     Local override; Severity: warning
-    @(174.7500 mm, 71.5250 mm): Footprint J5
+    @(147.7500 mm, 78.5250 mm): Footprint J5
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; Severity: warning
+    @(53.0000 mm, 40.0000 mm): Line on Edge.Cuts
+    @(88.2000 mm, 40.3500 mm): Reference 'RV3'
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; Severity: warning
+    @(53.0000 mm, 40.0000 mm): Line on Edge.Cuts
+    @(148.2000 mm, 40.3500 mm): Reference 'RV1'
 
 ** Found 151 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(115.0000 mm, 64.5000 mm): PTH pad 1 [+5V] of C9
-    @(110.8200 mm, 61.1000 mm): PTH pad 16 [+5V] of U3
+    @(164.0000 mm, 67.5000 mm): PTH pad 1 [+5V] of C6
+    @(159.8200 mm, 63.2000 mm): PTH pad 8 [+5V] of U2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(71.8200 mm, 66.2000 mm): PTH pad 8 [+5V] of U5
-    @(77.1900 mm, 61.0000 mm): PTH pad 1 [+5V] of R10
+    @(168.0000 mm, 72.0450 mm): PTH pad 1 [+5V] of R4
+    @(164.0000 mm, 67.5000 mm): PTH pad 1 [+5V] of C6
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(78.0449 mm, 115.0000 mm): PTH pad 1 [+5V] of C4
-    @(69.7300 mm, 115.3600 mm): PTH pad 1 [+5V] of U1
+    @(67.8200 mm, 62.2000 mm): PTH pad 8 [+5V] of U5
+    @(72.5000 mm, 66.0450 mm): PTH pad 1 [+5V] of R10
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(69.7300 mm, 115.3600 mm): PTH pad 1 [+5V] of U1
-    @(65.5000 mm, 123.0000 mm): PTH pad 1 [+5V] of C5
+    @(104.0000 mm, 68.5000 mm): PTH pad 1 [+5V] of C9
+    @(99.8200 mm, 63.1000 mm): PTH pad 16 [+5V] of U3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(206.1900 mm, 74.0000 mm): PTH pad 1 [+5V] of R4
-    @(200.8200 mm, 66.2000 mm): PTH pad 8 [+5V] of U2
+    @(61.0449 mm, 117.0000 mm): PTH pad 1 [+5V] of C4
+    @(60.7300 mm, 109.3600 mm): PTH pad 1 [+5V] of U1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(193.2000 mm, 73.8200 mm): PTH pad 4 [+5V] of U2
-    @(189.0000 mm, 64.5000 mm): PTH pad 1 [+5V] of C6
+    @(152.2000 mm, 70.8200 mm): PTH pad 4 [+5V] of U2
+    @(159.8200 mm, 63.2000 mm): PTH pad 8 [+5V] of U2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(200.8200 mm, 66.2000 mm): PTH pad 8 [+5V] of U2
-    @(193.2000 mm, 73.8200 mm): PTH pad 4 [+5V] of U2
+    @(55.0000 mm, 126.5000 mm): PTH pad 1 [+5V] of C5
+    @(61.0449 mm, 117.0000 mm): PTH pad 1 [+5V] of C4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(59.0000 mm, 64.5000 mm): PTH pad 1 [+5V] of C17
-    @(71.8200 mm, 66.2000 mm): PTH pad 8 [+5V] of U5
+    @(72.5000 mm, 66.0450 mm): PTH pad 1 [+5V] of R10
+    @(72.5000 mm, 78.5000 mm): PTH pad 1 [+5V] of C17
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(110.8200 mm, 61.1000 mm): PTH pad 16 [+5V] of U3
-    @(77.1900 mm, 61.0000 mm): PTH pad 1 [+5V] of R10
+    @(99.8200 mm, 63.1000 mm): PTH pad 16 [+5V] of U3
+    @(72.5000 mm, 66.0450 mm): PTH pad 1 [+5V] of R10
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(78.0449 mm, 115.0000 mm): PTH pad 1 [+5V] of C4
-    @(71.8200 mm, 66.2000 mm): PTH pad 8 [+5V] of U5
+    @(72.5000 mm, 78.5000 mm): PTH pad 1 [+5V] of C17
+    @(60.7300 mm, 109.3600 mm): PTH pad 1 [+5V] of U1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(189.0000 mm, 64.5000 mm): PTH pad 1 [+5V] of C6
-    @(115.0000 mm, 64.5000 mm): PTH pad 1 [+5V] of C9
+    @(152.2000 mm, 70.8200 mm): PTH pad 4 [+5V] of U2
+    @(104.0000 mm, 68.5000 mm): PTH pad 1 [+5V] of C9
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(64.1900 mm, 103.5000 mm): PTH pad 1 [+9V] of R1
-    @(64.1900 mm, 108.0000 mm): PTH pad 1 [+9V] of R2
+    @(124.8200 mm, 68.2800 mm): PTH pad 6 [+9V] of U4
+    @(129.3176 mm, 65.0000 mm): PTH pad 1 [+9V] of C13
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(73.5000 mm, 45.3575 mm): PTH pad 1 [+9V] of SW1
-    @(78.5000 mm, 48.6575 mm): PTH pad 4 [+9V] of SW1
+    @(71.3000 mm, 47.6575 mm): PTH pad 4 [+9V] of SW1
+    @(66.3000 mm, 44.3575 mm): PTH pad 1 [+9V] of SW1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(64.1900 mm, 103.5000 mm): PTH pad 1 [+9V] of R1
-    @(59.3473 mm, 97.0000 mm): PTH pad 1 [+9V] of C1
+    @(55.0000 mm, 102.5000 mm): PTH pad 1 [+9V] of C2
+    @(55.0000 mm, 110.0450 mm): PTH pad 1 [+9V] of R2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(150.0000 mm, 77.5000 mm): PTH pad 1 [+9V] of C14
-    @(142.8200 mm, 71.2800 mm): PTH pad 6 [+9V] of U4
+    @(55.0000 mm, 110.0450 mm): PTH pad 1 [+9V] of R2
+    @(55.0000 mm, 118.0450 mm): PTH pad 1 [+9V] of R1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(148.8176 mm, 63.0000 mm): PTH pad 1 [+9V] of C13
-    @(142.8200 mm, 71.2800 mm): PTH pad 6 [+9V] of U4
+    @(128.0000 mm, 79.5000 mm): PTH pad 1 [+9V] of C14
+    @(124.8200 mm, 68.2800 mm): PTH pad 6 [+9V] of U4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(64.1900 mm, 103.5000 mm): PTH pad 1 [+9V] of R1
-    @(74.0000 mm, 99.5000 mm): PTH pad 1 [+9V] of C2
+    @(55.0000 mm, 102.5000 mm): PTH pad 1 [+9V] of C2
+    @(60.3473 mm, 90.0000 mm): PTH pad 1 [+9V] of C1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(78.5000 mm, 48.6575 mm): PTH pad 4 [+9V] of SW1
-    @(74.0000 mm, 99.5000 mm): PTH pad 1 [+9V] of C2
+    @(71.3000 mm, 47.6575 mm): PTH pad 4 [+9V] of SW1
+    @(60.3473 mm, 90.0000 mm): PTH pad 1 [+9V] of C1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(142.8200 mm, 71.2800 mm): PTH pad 6 [+9V] of U4
-    @(78.5000 mm, 48.6575 mm): PTH pad 4 [+9V] of SW1
+    @(124.8200 mm, 68.2800 mm): PTH pad 6 [+9V] of U4
+    @(71.3000 mm, 47.6575 mm): PTH pad 4 [+9V] of SW1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(135.2000 mm, 71.2800 mm): PTH pad 3 [AMP_IN] of U4
-    @(151.9500 mm, 49.0000 mm): PTH pad 2 [AMP_IN] of RV1
+    @(117.2000 mm, 68.2800 mm): PTH pad 3 [AMP_IN] of U4
+    @(142.1500 mm, 48.0000 mm): PTH pad 2 [AMP_IN] of RV1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(156.5000 mm, 73.8100 mm): PTH pad 1 [AMP_OUT] of R8
-    @(162.3473 mm, 64.0000 mm): PTH pad 1 [AMP_OUT] of C16
+    @(124.8200 mm, 70.8200 mm): PTH pad 5 [AMP_OUT] of U4
+    @(133.0000 mm, 77.0450 mm): PTH pad 1 [AMP_OUT] of R8
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(142.8200 mm, 73.8200 mm): PTH pad 5 [AMP_OUT] of U4
-    @(156.5000 mm, 73.8100 mm): PTH pad 1 [AMP_OUT] of R8
+    @(133.0000 mm, 77.0450 mm): PTH pad 1 [AMP_OUT] of R8
+    @(138.3473 mm, 66.0000 mm): PTH pad 1 [AMP_OUT] of C16
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(58.0500 mm, 51.2250 mm): PTH pad 3 [BAT_P] of J1
-    @(64.7500 mm, 133.5250 mm): PTH pad 1 [BAT_P] of J2
+    @(52.8500 mm, 51.2250 mm): PTH pad 3 [BAT_P] of J1
+    @(61.2500 mm, 127.5250 mm): PTH pad 1 [BAT_P] of J2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(132.0449 mm, 79.0000 mm): PTH pad 1 [BYP] of C12
-    @(142.8200 mm, 68.7400 mm): PTH pad 7 [BYP] of U4
+    @(119.0449 mm, 78.0000 mm): PTH pad 1 [BYP] of C12
+    @(124.8200 mm, 65.7400 mm): PTH pad 7 [BYP] of U4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(206.1900 mm, 78.5000 mm): PTH pad 1 [CV] of R5
-    @(200.8200 mm, 73.8200 mm): PTH pad 5 [CV] of U2
+    @(174.5000 mm, 72.0000 mm): PTH pad 1 [CV] of C8
+    @(171.5000 mm, 72.0450 mm): PTH pad 1 [CV] of R5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(206.1900 mm, 78.5000 mm): PTH pad 1 [CV] of R5
-    @(213.8100 mm, 74.0000 mm): PTH pad 2 [CV] of R4
+    @(171.5000 mm, 72.0450 mm): PTH pad 1 [CV] of R5
+    @(168.0000 mm, 69.5050 mm): PTH pad 2 [CV] of R4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(189.0000 mm, 80.5000 mm): PTH pad 1 [CV] of C8
-    @(200.8200 mm, 73.8200 mm): PTH pad 5 [CV] of U2
+    @(159.8200 mm, 70.8200 mm): PTH pad 5 [CV] of U2
+    @(168.0000 mm, 69.5050 mm): PTH pad 2 [CV] of R4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(92.0449 mm, 70.0000 mm): PTH pad 1 [CV] of C20
-    @(189.0000 mm, 80.5000 mm): PTH pad 1 [CV] of C8
+    @(159.8200 mm, 70.8200 mm): PTH pad 5 [CV] of U2
+    @(83.5449 mm, 75.0000 mm): PTH pad 1 [CV] of C20
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(210.5500 mm, 85.0000 mm): PTH pad 1 [CV_LO] of RV5
-    @(213.8100 mm, 78.5000 mm): PTH pad 2 [CV_LO] of R5
+    @(171.5000 mm, 69.5050 mm): PTH pad 2 [CV_LO] of R5
+    @(175.5500 mm, 79.0000 mm): PTH pad 1 [CV_LO] of RV5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(62.7500 mm, 48.2250 mm): PTH pad 2 [DC_IN] of J1
-    @(72.0800 mm, 87.0000 mm): PTH pad 2 [DC_IN] of D1
+    @(55.0000 mm, 87.6778 mm): PTH pad 2 [DC_IN] of D1
+    @(57.5500 mm, 48.2250 mm): PTH pad 2 [DC_IN] of J1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(89.9500 mm, 51.5000 mm): PTH pad 3 [DEPTH_TOP] of RV3
-    @(94.0449 mm, 63.0000 mm): PTH pad 2 [DEPTH_TOP] of C19
+    @(79.0449 mm, 75.0000 mm): PTH pad 2 [DEPTH_TOP] of C19
+    @(82.1500 mm, 50.5000 mm): PTH pad 3 [DEPTH_TOP] of RV3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(110.0000 mm, 45.3575 mm): PTH pad 2 [DEPTH_W] of SW5
-    @(89.9500 mm, 49.0000 mm): PTH pad 2 [DEPTH_W] of RV3
+    @(82.1500 mm, 48.0000 mm): PTH pad 2 [DEPTH_W] of RV3
+    @(86.5000 mm, 66.0450 mm): PTH pad 1 [DEPTH_W] of R14
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(89.9500 mm, 49.0000 mm): PTH pad 2 [DEPTH_W] of RV3
-    @(89.1900 mm, 77.5000 mm): PTH pad 1 [DEPTH_W] of R14
+    @(101.8000 mm, 44.3575 mm): PTH pad 2 [DEPTH_W] of SW5
+    @(82.1500 mm, 48.0000 mm): PTH pad 2 [DEPTH_W] of RV3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(205.4700 mm, 85.0000 mm): PTH pad 3 [GND] of RV5
-    @(208.0100 mm, 85.0000 mm): PTH pad 2 [GND] of RV5
+    @(173.0100 mm, 79.0000 mm): PTH pad 2 [GND] of RV5
+    @(170.4700 mm, 79.0000 mm): PTH pad 3 [GND] of RV5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(61.0000 mm, 77.5000 mm): PTH pad 2 [GND] of C18
-    @(64.2000 mm, 73.8200 mm): PTH pad 4 [GND] of U5
+    @(177.0000 mm, 63.5050 mm): PTH pad 2 [GND] of R3
+    @(173.5000 mm, 64.0000 mm): PTH pad 2 [GND] of C7
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(135.2000 mm, 73.8200 mm): PTH pad 4 [GND] of U4
-    @(135.2000 mm, 68.7400 mm): PTH pad 2 [GND] of U4
+    @(117.2000 mm, 65.7400 mm): PTH pad 2 [GND] of U4
+    @(117.2000 mm, 70.8200 mm): PTH pad 4 [GND] of U4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(134.0449 mm, 79.0000 mm): PTH pad 2 [GND] of C12
-    @(135.2000 mm, 73.8200 mm): PTH pad 4 [GND] of U4
+    @(82.1500 mm, 45.5000 mm): PTH pad 1 [GND] of RV3
+    @(76.2250 mm, 46.0000 mm): PTH pad 1 [GND] of D2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(213.8100 mm, 69.0000 mm): PTH pad 2 [GND] of R3
-    @(212.5000 mm, 63.0000 mm): PTH pad 2 [GND] of C7
+    @(72.5000 mm, 73.5000 mm): PTH pad 2 [GND] of C17
+    @(66.0000 mm, 75.5000 mm): PTH pad 2 [GND] of C18
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(62.7500 mm, 54.2250 mm): PTH pad 1 [GND] of J1
-    @(59.0000 mm, 59.5000 mm): PTH pad 2 [GND] of C17
+    @(62.0000 mm, 109.3600 mm): PTH pad 2 [GND] of U1
+    @(63.0449 mm, 117.0000 mm): PTH pad 2 [GND] of C4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(89.9500 mm, 46.5000 mm): PTH pad 1 [GND] of RV3
-    @(82.7250 mm, 47.0000 mm): PTH pad 1 [GND] of D2
+    @(128.0000 mm, 74.5000 mm): PTH pad 2 [GND] of C14
+    @(121.0449 mm, 78.0000 mm): PTH pad 2 [GND] of C12
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(71.0000 mm, 115.3600 mm): PTH pad 2 [GND] of U1
-    @(70.5000 mm, 123.0000 mm): PTH pad 2 [GND] of C5
+    @(66.0000 mm, 75.5000 mm): PTH pad 2 [GND] of C18
+    @(60.2000 mm, 69.8200 mm): PTH pad 4 [GND] of U5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(193.2000 mm, 66.2000 mm): PTH pad 1 [GND] of U2
-    @(189.0000 mm, 59.5000 mm): PTH pad 2 [GND] of C6
+    @(121.0449 mm, 78.0000 mm): PTH pad 2 [GND] of C12
+    @(117.2000 mm, 70.8200 mm): PTH pad 4 [GND] of U4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(80.0449 mm, 115.0000 mm): PTH pad 2 [GND] of C4
-    @(71.0000 mm, 115.3600 mm): PTH pad 2 [GND] of U1
+    @(63.3176 mm, 100.0000 mm): PTH pad 2 [GND] of C3
+    @(55.0000 mm, 97.5000 mm): PTH pad 2 [GND] of C2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(103.2000 mm, 78.8800 mm): PTH pad 8 [GND] of U3
-    @(110.8200 mm, 73.8000 mm): PTH pad 11 [GND] of U3
+    @(177.0000 mm, 63.5050 mm): PTH pad 2 [GND] of R3
+    @(179.5000 mm, 72.0000 mm): PTH pad 2 [GND] of C8
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(151.3176 mm, 63.0000 mm): PTH pad 2 [GND] of C13
-    @(150.0000 mm, 72.5000 mm): PTH pad 2 [GND] of C14
+    @(128.0000 mm, 74.5000 mm): PTH pad 2 [GND] of C14
+    @(137.0000 mm, 74.5000 mm): PTH pad 2 [GND] of C15
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(61.3176 mm, 115.0000 mm): PTH pad 2 [GND] of C3
-    @(71.0000 mm, 115.3600 mm): PTH pad 2 [GND] of U1
+    @(92.2000 mm, 80.8800 mm): PTH pad 8 [GND] of U3
+    @(99.8200 mm, 75.8000 mm): PTH pad 11 [GND] of U3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(189.0000 mm, 75.5000 mm): PTH pad 2 [GND] of C8
-    @(193.2000 mm, 66.2000 mm): PTH pad 1 [GND] of U2
+    @(63.0449 mm, 117.0000 mm): PTH pad 2 [GND] of C4
+    @(55.0000 mm, 121.5000 mm): PTH pad 2 [GND] of C5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(70.5000 mm, 123.0000 mm): PTH pad 2 [GND] of C5
-    @(67.2500 mm, 133.5250 mm): PTH pad 2 [GND] of J2
+    @(63.3176 mm, 100.0000 mm): PTH pad 2 [GND] of C3
+    @(62.0000 mm, 109.3600 mm): PTH pad 2 [GND] of U1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(62.8473 mm, 97.0000 mm): PTH pad 2 [GND] of C1
-    @(74.0000 mm, 94.5000 mm): PTH pad 2 [GND] of C2
+    @(173.0100 mm, 79.0000 mm): PTH pad 2 [GND] of RV5
+    @(179.5000 mm, 72.0000 mm): PTH pad 2 [GND] of C8
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(151.9500 mm, 46.5000 mm): PTH pad 1 [GND] of RV1
-    @(140.5000 mm, 45.3575 mm): PTH pad 1 [GND] of SW4
+    @(164.0000 mm, 62.5000 mm): PTH pad 2 [GND] of C6
+    @(173.5000 mm, 64.0000 mm): PTH pad 2 [GND] of C7
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(159.5000 mm, 79.0000 mm): PTH pad 2 [GND] of C15
-    @(150.0000 mm, 72.5000 mm): PTH pad 2 [GND] of C14
+    @(142.1500 mm, 45.5000 mm): PTH pad 1 [GND] of RV1
+    @(132.3000 mm, 44.3575 mm): PTH pad 1 [GND] of SW4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(189.0000 mm, 75.5000 mm): PTH pad 2 [GND] of C8
-    @(177.2500 mm, 71.5250 mm): PTH pad 2 [GND] of J5
+    @(63.3176 mm, 100.0000 mm): PTH pad 2 [GND] of C3
+    @(63.8473 mm, 90.0000 mm): PTH pad 2 [GND] of C1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(150.0000 mm, 72.5000 mm): PTH pad 2 [GND] of C14
-    @(135.2000 mm, 73.8200 mm): PTH pad 4 [GND] of U4
+    @(128.0000 mm, 74.5000 mm): PTH pad 2 [GND] of C14
+    @(131.8176 mm, 65.0000 mm): PTH pad 2 [GND] of C13
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(110.8200 mm, 73.8000 mm): PTH pad 11 [GND] of U3
-    @(115.0000 mm, 59.5000 mm): PTH pad 2 [GND] of C9
+    @(63.7500 mm, 127.5250 mm): PTH pad 2 [GND] of J2
+    @(63.0449 mm, 117.0000 mm): PTH pad 2 [GND] of C4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(59.0000 mm, 59.5000 mm): PTH pad 2 [GND] of C17
-    @(64.2000 mm, 73.8200 mm): PTH pad 4 [GND] of U5
+    @(76.0000 mm, 63.5050 mm): PTH pad 2 [GND] of R11
+    @(72.5000 mm, 73.5000 mm): PTH pad 2 [GND] of C17
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(115.0000 mm, 59.5000 mm): PTH pad 2 [GND] of C9
-    @(107.5000 mm, 45.3575 mm): PTH pad 1 [GND] of SW5
+    @(161.5000 mm, 45.7250 mm): PTH pad S [GND] of J4
+    @(172.5000 mm, 45.7250 mm): PTH pad S [GND] of J3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(151.9500 mm, 46.5000 mm): PTH pad 1 [GND] of RV1
-    @(151.3176 mm, 63.0000 mm): PTH pad 2 [GND] of C13
+    @(152.2000 mm, 63.2000 mm): PTH pad 1 [GND] of U2
+    @(164.0000 mm, 62.5000 mm): PTH pad 2 [GND] of C6
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(208.0100 mm, 85.0000 mm): PTH pad 2 [GND] of RV5
-    @(213.8100 mm, 69.0000 mm): PTH pad 2 [GND] of R3
+    @(99.8200 mm, 75.8000 mm): PTH pad 11 [GND] of U3
+    @(104.0000 mm, 63.5000 mm): PTH pad 2 [GND] of C9
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(107.5000 mm, 45.3575 mm): PTH pad 1 [GND] of SW5
-    @(89.9500 mm, 46.5000 mm): PTH pad 1 [GND] of RV3
+    @(117.2000 mm, 65.7400 mm): PTH pad 2 [GND] of U4
+    @(104.0000 mm, 63.5000 mm): PTH pad 2 [GND] of C9
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(214.2750 mm, 101.9000 mm): PTH pad S [GND] of J3
-    @(208.0100 mm, 85.0000 mm): PTH pad 2 [GND] of RV5
+    @(137.0000 mm, 74.5000 mm): PTH pad 2 [GND] of C15
+    @(150.2500 mm, 78.5250 mm): PTH pad 2 [GND] of J5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(62.8473 mm, 97.0000 mm): PTH pad 2 [GND] of C1
-    @(61.3176 mm, 115.0000 mm): PTH pad 2 [GND] of C3
+    @(63.8473 mm, 90.0000 mm): PTH pad 2 [GND] of C1
+    @(66.0000 mm, 75.5000 mm): PTH pad 2 [GND] of C18
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(82.7250 mm, 47.0000 mm): PTH pad 1 [GND] of D2
-    @(84.8100 mm, 65.0000 mm): PTH pad 2 [GND] of R11
+    @(150.2500 mm, 78.5250 mm): PTH pad 2 [GND] of J5
+    @(152.2000 mm, 63.2000 mm): PTH pad 1 [GND] of U2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(175.9000 mm, 45.7250 mm): PTH pad S [GND] of J4
-    @(189.0000 mm, 59.5000 mm): PTH pad 2 [GND] of C6
+    @(60.2000 mm, 69.8200 mm): PTH pad 4 [GND] of U5
+    @(57.5500 mm, 54.2250 mm): PTH pad 1 [GND] of J1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(205.4700 mm, 85.0000 mm): PTH pad 3 [GND] of RV5
-    @(189.0000 mm, 75.5000 mm): PTH pad 2 [GND] of C8
+    @(161.5000 mm, 45.7250 mm): PTH pad S [GND] of J4
+    @(164.0000 mm, 62.5000 mm): PTH pad 2 [GND] of C6
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(159.5000 mm, 79.0000 mm): PTH pad 2 [GND] of C15
-    @(177.2500 mm, 71.5250 mm): PTH pad 2 [GND] of J5
+    @(99.3000 mm, 44.3575 mm): PTH pad 1 [GND] of SW5
+    @(82.1500 mm, 45.5000 mm): PTH pad 1 [GND] of RV3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(61.0000 mm, 77.5000 mm): PTH pad 2 [GND] of C18
-    @(62.8473 mm, 97.0000 mm): PTH pad 2 [GND] of C1
+    @(76.0000 mm, 63.5050 mm): PTH pad 2 [GND] of R11
+    @(76.2250 mm, 46.0000 mm): PTH pad 1 [GND] of D2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(82.7250 mm, 47.0000 mm): PTH pad 1 [GND] of D2
-    @(62.7500 mm, 54.2250 mm): PTH pad 1 [GND] of J1
+    @(161.5000 mm, 45.7250 mm): PTH pad S [GND] of J4
+    @(142.1500 mm, 45.5000 mm): PTH pad 1 [GND] of RV1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(115.0000 mm, 59.5000 mm): PTH pad 2 [GND] of C9
-    @(135.2000 mm, 68.7400 mm): PTH pad 2 [GND] of U4
+    @(104.0000 mm, 63.5000 mm): PTH pad 2 [GND] of C9
+    @(99.3000 mm, 44.3575 mm): PTH pad 1 [GND] of SW5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(177.9000 mm, 53.6250 mm): PTH pad R [HP] of J4
-    @(177.9000 mm, 48.1250 mm): PTH pad T [HP] of J4
+    @(163.5000 mm, 53.6250 mm): PTH pad R [HP] of J4
+    @(163.5000 mm, 48.1250 mm): PTH pad T [HP] of J4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(164.5000 mm, 70.1900 mm): PTH pad 2 [HP] of R9
-    @(177.9000 mm, 53.6250 mm): PTH pad R [HP] of J4
+    @(142.0000 mm, 75.5050 mm): PTH pad 2 [HP] of R9
+    @(163.5000 mm, 53.6250 mm): PTH pad R [HP] of J4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(89.6500 mm, 89.0050 mm): PTH pad 2 [KEY1] of R120
-    @(89.6500 mm, 99.6000 mm): PTH pad 1 [KEY1] of K1
+    @(72.6500 mm, 88.0050 mm): PTH pad 2 [KEY1] of R120
+    @(72.6500 mm, 98.6000 mm): PTH pad 1 [KEY1] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(135.0000 mm, 83.5050 mm): PTH pad 2 [KEY10] of R111
-    @(129.6500 mm, 91.5450 mm): PTH pad 1 [KEY10] of R112
+    @(118.0000 mm, 88.0050 mm): PTH pad 2 [KEY10] of R111
+    @(112.6500 mm, 90.5450 mm): PTH pad 1 [KEY10] of R112
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(135.0000 mm, 99.6000 mm): PTH pad 10 [KEY10] of K1
-    @(129.6500 mm, 91.5450 mm): PTH pad 1 [KEY10] of R112
+    @(118.0000 mm, 98.6000 mm): PTH pad 10 [KEY10] of K1
+    @(112.6500 mm, 90.5450 mm): PTH pad 1 [KEY10] of R112
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(139.0000 mm, 89.0050 mm): PTH pad 2 [KEY11] of R110
-    @(135.0000 mm, 86.0450 mm): PTH pad 1 [KEY11] of R111
+    @(122.0000 mm, 88.0050 mm): PTH pad 2 [KEY11] of R110
+    @(118.0000 mm, 90.5450 mm): PTH pad 1 [KEY11] of R111
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(139.0000 mm, 99.6000 mm): PTH pad 11 [KEY11] of K1
-    @(139.0000 mm, 89.0050 mm): PTH pad 2 [KEY11] of R110
+    @(118.0000 mm, 90.5450 mm): PTH pad 1 [KEY11] of R111
+    @(122.0000 mm, 98.6000 mm): PTH pad 11 [KEY11] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(143.0000 mm, 83.5050 mm): PTH pad 2 [KEY12] of R109
-    @(139.0000 mm, 91.5450 mm): PTH pad 1 [KEY12] of R110
+    @(126.0000 mm, 88.0050 mm): PTH pad 2 [KEY12] of R109
+    @(122.0000 mm, 90.5450 mm): PTH pad 1 [KEY12] of R110
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(139.0000 mm, 91.5450 mm): PTH pad 1 [KEY12] of R110
-    @(143.0000 mm, 99.6000 mm): PTH pad 12 [KEY12] of K1
+    @(122.0000 mm, 90.5450 mm): PTH pad 1 [KEY12] of R110
+    @(126.0000 mm, 98.6000 mm): PTH pad 12 [KEY12] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(147.0000 mm, 89.0050 mm): PTH pad 2 [KEY13] of R108
-    @(143.0000 mm, 86.0450 mm): PTH pad 1 [KEY13] of R109
+    @(130.0000 mm, 88.0050 mm): PTH pad 2 [KEY13] of R108
+    @(126.0000 mm, 90.5450 mm): PTH pad 1 [KEY13] of R109
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(147.0000 mm, 99.6000 mm): PTH pad 13 [KEY13] of K1
-    @(147.0000 mm, 89.0050 mm): PTH pad 2 [KEY13] of R108
+    @(126.0000 mm, 90.5450 mm): PTH pad 1 [KEY13] of R109
+    @(130.0000 mm, 98.6000 mm): PTH pad 13 [KEY13] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(151.0000 mm, 83.5050 mm): PTH pad 2 [KEY14] of R107
-    @(147.0000 mm, 91.5450 mm): PTH pad 1 [KEY14] of R108
+    @(134.0000 mm, 88.0050 mm): PTH pad 2 [KEY14] of R107
+    @(130.0000 mm, 90.5450 mm): PTH pad 1 [KEY14] of R108
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(147.0000 mm, 91.5450 mm): PTH pad 1 [KEY14] of R108
-    @(151.0000 mm, 99.6000 mm): PTH pad 14 [KEY14] of K1
+    @(130.0000 mm, 90.5450 mm): PTH pad 1 [KEY14] of R108
+    @(134.0000 mm, 98.6000 mm): PTH pad 14 [KEY14] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(156.3500 mm, 89.0050 mm): PTH pad 2 [KEY15] of R106
-    @(151.0000 mm, 86.0450 mm): PTH pad 1 [KEY15] of R107
+    @(139.3500 mm, 88.0050 mm): PTH pad 2 [KEY15] of R106
+    @(134.0000 mm, 90.5450 mm): PTH pad 1 [KEY15] of R107
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(156.3500 mm, 99.6000 mm): PTH pad 15 [KEY15] of K1
-    @(156.3500 mm, 89.0050 mm): PTH pad 2 [KEY15] of R106
+    @(134.0000 mm, 90.5450 mm): PTH pad 1 [KEY15] of R107
+    @(139.3500 mm, 98.6000 mm): PTH pad 15 [KEY15] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(161.6500 mm, 83.5050 mm): PTH pad 2 [KEY16] of R105
-    @(156.3500 mm, 91.5450 mm): PTH pad 1 [KEY16] of R106
+    @(144.6500 mm, 88.0050 mm): PTH pad 2 [KEY16] of R105
+    @(139.3500 mm, 90.5450 mm): PTH pad 1 [KEY16] of R106
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(156.3500 mm, 91.5450 mm): PTH pad 1 [KEY16] of R106
-    @(161.6500 mm, 99.6000 mm): PTH pad 16 [KEY16] of K1
+    @(139.3500 mm, 90.5450 mm): PTH pad 1 [KEY16] of R106
+    @(144.6500 mm, 98.6000 mm): PTH pad 16 [KEY16] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(167.0000 mm, 89.0050 mm): PTH pad 2 [KEY17] of R104
-    @(161.6500 mm, 86.0450 mm): PTH pad 1 [KEY17] of R105
+    @(150.0000 mm, 88.0050 mm): PTH pad 2 [KEY17] of R104
+    @(144.6500 mm, 90.5450 mm): PTH pad 1 [KEY17] of R105
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(167.0000 mm, 99.6000 mm): PTH pad 17 [KEY17] of K1
-    @(167.0000 mm, 89.0050 mm): PTH pad 2 [KEY17] of R104
+    @(150.0000 mm, 98.6000 mm): PTH pad 17 [KEY17] of K1
+    @(144.6500 mm, 90.5450 mm): PTH pad 1 [KEY17] of R105
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(171.0000 mm, 83.5050 mm): PTH pad 2 [KEY18] of R103
-    @(167.0000 mm, 91.5450 mm): PTH pad 1 [KEY18] of R104
+    @(154.0000 mm, 88.0050 mm): PTH pad 2 [KEY18] of R103
+    @(150.0000 mm, 90.5450 mm): PTH pad 1 [KEY18] of R104
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(167.0000 mm, 91.5450 mm): PTH pad 1 [KEY18] of R104
-    @(171.0000 mm, 99.6000 mm): PTH pad 18 [KEY18] of K1
+    @(150.0000 mm, 90.5450 mm): PTH pad 1 [KEY18] of R104
+    @(154.0000 mm, 98.6000 mm): PTH pad 18 [KEY18] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(175.0000 mm, 89.0050 mm): PTH pad 2 [KEY19] of R102
-    @(171.0000 mm, 86.0450 mm): PTH pad 1 [KEY19] of R103
+    @(158.0000 mm, 88.0050 mm): PTH pad 2 [KEY19] of R102
+    @(154.0000 mm, 90.5450 mm): PTH pad 1 [KEY19] of R103
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(175.0000 mm, 99.6000 mm): PTH pad 19 [KEY19] of K1
-    @(175.0000 mm, 89.0050 mm): PTH pad 2 [KEY19] of R102
+    @(154.0000 mm, 90.5450 mm): PTH pad 1 [KEY19] of R103
+    @(158.0000 mm, 98.6000 mm): PTH pad 19 [KEY19] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(95.0000 mm, 83.5050 mm): PTH pad 2 [KEY2] of R119
-    @(89.6500 mm, 91.5450 mm): PTH pad 1 [KEY2] of R120
+    @(78.0000 mm, 88.0050 mm): PTH pad 2 [KEY2] of R119
+    @(72.6500 mm, 90.5450 mm): PTH pad 1 [KEY2] of R120
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(95.0000 mm, 99.6000 mm): PTH pad 2 [KEY2] of K1
-    @(89.6500 mm, 91.5450 mm): PTH pad 1 [KEY2] of R120
+    @(78.0000 mm, 98.6000 mm): PTH pad 2 [KEY2] of K1
+    @(72.6500 mm, 90.5450 mm): PTH pad 1 [KEY2] of R120
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(193.0100 mm, 90.0000 mm): PTH pad 2 [KEY20] of RV4
-    @(190.4700 mm, 90.0000 mm): PTH pad 3 [KEY20] of RV4
+    @(173.0000 mm, 98.5300 mm): PTH pad 3 [KEY20] of RV4
+    @(173.0000 mm, 95.9900 mm): PTH pad 2 [KEY20] of RV4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(175.0000 mm, 91.5450 mm): PTH pad 1 [KEY20] of R102
-    @(180.3500 mm, 99.6000 mm): PTH pad 20 [KEY20] of K1
+    @(173.0000 mm, 98.5300 mm): PTH pad 3 [KEY20] of RV4
+    @(163.3500 mm, 98.6000 mm): PTH pad 20 [KEY20] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(180.3500 mm, 99.6000 mm): PTH pad 20 [KEY20] of K1
-    @(190.4700 mm, 90.0000 mm): PTH pad 3 [KEY20] of RV4
+    @(163.3500 mm, 98.6000 mm): PTH pad 20 [KEY20] of K1
+    @(158.0000 mm, 90.5450 mm): PTH pad 1 [KEY20] of R102
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(100.3500 mm, 89.0050 mm): PTH pad 2 [KEY3] of R118
-    @(95.0000 mm, 86.0450 mm): PTH pad 1 [KEY3] of R119
+    @(83.3500 mm, 88.0050 mm): PTH pad 2 [KEY3] of R118
+    @(78.0000 mm, 90.5450 mm): PTH pad 1 [KEY3] of R119
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(100.3500 mm, 99.6000 mm): PTH pad 3 [KEY3] of K1
-    @(100.3500 mm, 89.0050 mm): PTH pad 2 [KEY3] of R118
+    @(78.0000 mm, 90.5450 mm): PTH pad 1 [KEY3] of R119
+    @(83.3500 mm, 98.6000 mm): PTH pad 3 [KEY3] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(105.6500 mm, 83.5050 mm): PTH pad 2 [KEY4] of R117
-    @(100.3500 mm, 91.5450 mm): PTH pad 1 [KEY4] of R118
+    @(88.6500 mm, 88.0050 mm): PTH pad 2 [KEY4] of R117
+    @(83.3500 mm, 90.5450 mm): PTH pad 1 [KEY4] of R118
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(100.3500 mm, 91.5450 mm): PTH pad 1 [KEY4] of R118
-    @(105.6500 mm, 99.6000 mm): PTH pad 4 [KEY4] of K1
+    @(83.3500 mm, 90.5450 mm): PTH pad 1 [KEY4] of R118
+    @(88.6500 mm, 98.6000 mm): PTH pad 4 [KEY4] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(111.0000 mm, 89.0050 mm): PTH pad 2 [KEY5] of R116
-    @(105.6500 mm, 86.0450 mm): PTH pad 1 [KEY5] of R117
+    @(94.0000 mm, 88.0050 mm): PTH pad 2 [KEY5] of R116
+    @(88.6500 mm, 90.5450 mm): PTH pad 1 [KEY5] of R117
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(111.0000 mm, 99.6000 mm): PTH pad 5 [KEY5] of K1
-    @(111.0000 mm, 89.0050 mm): PTH pad 2 [KEY5] of R116
+    @(94.0000 mm, 98.6000 mm): PTH pad 5 [KEY5] of K1
+    @(88.6500 mm, 90.5450 mm): PTH pad 1 [KEY5] of R117
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(115.0000 mm, 83.5050 mm): PTH pad 2 [KEY6] of R115
-    @(111.0000 mm, 91.5450 mm): PTH pad 1 [KEY6] of R116
+    @(98.0000 mm, 88.0050 mm): PTH pad 2 [KEY6] of R115
+    @(94.0000 mm, 90.5450 mm): PTH pad 1 [KEY6] of R116
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(111.0000 mm, 91.5450 mm): PTH pad 1 [KEY6] of R116
-    @(115.0000 mm, 99.6000 mm): PTH pad 6 [KEY6] of K1
+    @(94.0000 mm, 90.5450 mm): PTH pad 1 [KEY6] of R116
+    @(98.0000 mm, 98.6000 mm): PTH pad 6 [KEY6] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(119.0000 mm, 89.0050 mm): PTH pad 2 [KEY7] of R114
-    @(115.0000 mm, 86.0450 mm): PTH pad 1 [KEY7] of R115
+    @(102.0000 mm, 88.0050 mm): PTH pad 2 [KEY7] of R114
+    @(98.0000 mm, 90.5450 mm): PTH pad 1 [KEY7] of R115
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(119.0000 mm, 99.6000 mm): PTH pad 7 [KEY7] of K1
-    @(119.0000 mm, 89.0050 mm): PTH pad 2 [KEY7] of R114
+    @(98.0000 mm, 90.5450 mm): PTH pad 1 [KEY7] of R115
+    @(102.0000 mm, 98.6000 mm): PTH pad 7 [KEY7] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(124.3500 mm, 83.5050 mm): PTH pad 2 [KEY8] of R113
-    @(119.0000 mm, 91.5450 mm): PTH pad 1 [KEY8] of R114
+    @(107.3500 mm, 88.0050 mm): PTH pad 2 [KEY8] of R113
+    @(102.0000 mm, 90.5450 mm): PTH pad 1 [KEY8] of R114
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(119.0000 mm, 91.5450 mm): PTH pad 1 [KEY8] of R114
-    @(124.3500 mm, 99.6000 mm): PTH pad 8 [KEY8] of K1
+    @(102.0000 mm, 90.5450 mm): PTH pad 1 [KEY8] of R114
+    @(107.3500 mm, 98.6000 mm): PTH pad 8 [KEY8] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(129.6500 mm, 89.0050 mm): PTH pad 2 [KEY9] of R112
-    @(124.3500 mm, 86.0450 mm): PTH pad 1 [KEY9] of R113
+    @(112.6500 mm, 88.0050 mm): PTH pad 2 [KEY9] of R112
+    @(107.3500 mm, 90.5450 mm): PTH pad 1 [KEY9] of R113
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(129.6500 mm, 99.6000 mm): PTH pad 9 [KEY9] of K1
-    @(129.6500 mm, 89.0050 mm): PTH pad 2 [KEY9] of R112
+    @(107.3500 mm, 90.5450 mm): PTH pad 1 [KEY9] of R113
+    @(112.6500 mm, 98.6000 mm): PTH pad 9 [KEY9] of K1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(180.3500 mm, 83.5050 mm): PTH pad 2 [LAD0] of R101
-    @(195.5500 mm, 90.0000 mm): PTH pad 1 [LAD0] of RV4
+    @(163.3500 mm, 88.0050 mm): PTH pad 2 [LAD0] of R101
+    @(173.0000 mm, 93.4500 mm): PTH pad 1 [LAD0] of RV4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(71.8100 mm, 103.5000 mm): PTH pad 2 [LED_A] of R1
-    @(85.2650 mm, 47.0000 mm): PTH pad 2 [LED_A] of D2
+    @(55.0000 mm, 115.5050 mm): PTH pad 2 [LED_A] of R1
+    @(78.7650 mm, 46.0000 mm): PTH pad 2 [LED_A] of D2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(71.8200 mm, 68.7400 mm): PTH pad 7 [LFO_BUF] of U5
-    @(71.8200 mm, 71.2800 mm): PTH pad 6 [LFO_BUF] of U5
+    @(67.8200 mm, 64.7400 mm): PTH pad 7 [LFO_BUF] of U5
+    @(67.8200 mm, 67.2800 mm): PTH pad 6 [LFO_BUF] of U5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(92.0449 mm, 63.0000 mm): PTH pad 1 [LFO_BUF] of C19
-    @(71.8200 mm, 68.7400 mm): PTH pad 7 [LFO_BUF] of U5
+    @(67.8200 mm, 67.2800 mm): PTH pad 6 [LFO_BUF] of U5
+    @(77.0449 mm, 75.0000 mm): PTH pad 1 [LFO_BUF] of C19
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(78.4700 mm, 78.5000 mm): PTH pad 3 [LFO_C] of RV2
-    @(81.0100 mm, 78.5000 mm): PTH pad 2 [LFO_C] of RV2
+    @(61.4700 mm, 82.0000 mm): PTH pad 3 [LFO_C] of RV2
+    @(64.0100 mm, 82.0000 mm): PTH pad 2 [LFO_C] of RV2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(71.8200 mm, 73.8200 mm): PTH pad 5 [LFO_C] of U5
-    @(78.4700 mm, 78.5000 mm): PTH pad 3 [LFO_C] of RV2
+    @(61.4700 mm, 82.0000 mm): PTH pad 3 [LFO_C] of RV2
+    @(61.0000 mm, 75.5000 mm): PTH pad 1 [LFO_C] of C18
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(71.8200 mm, 73.8200 mm): PTH pad 5 [LFO_C] of U5
-    @(64.2000 mm, 68.7400 mm): PTH pad 2 [LFO_C] of U5
+    @(61.0000 mm, 75.5000 mm): PTH pad 1 [LFO_C] of C18
+    @(67.8200 mm, 69.8200 mm): PTH pad 5 [LFO_C] of U5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(64.2000 mm, 68.7400 mm): PTH pad 2 [LFO_C] of U5
-    @(56.0000 mm, 77.5000 mm): PTH pad 1 [LFO_C] of C18
+    @(67.8200 mm, 69.8200 mm): PTH pad 5 [LFO_C] of U5
+    @(60.2000 mm, 64.7400 mm): PTH pad 2 [LFO_C] of U5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(84.8100 mm, 69.0000 mm): PTH pad 2 [LFO_P] of R12
-    @(84.8100 mm, 61.0000 mm): PTH pad 2 [LFO_P] of R10
+    @(72.5000 mm, 63.5050 mm): PTH pad 2 [LFO_P] of R10
+    @(76.0000 mm, 66.0450 mm): PTH pad 1 [LFO_P] of R11
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(77.1900 mm, 65.0000 mm): PTH pad 1 [LFO_P] of R11
-    @(84.8100 mm, 69.0000 mm): PTH pad 2 [LFO_P] of R12
+    @(76.0000 mm, 66.0450 mm): PTH pad 1 [LFO_P] of R11
+    @(79.5000 mm, 63.5050 mm): PTH pad 2 [LFO_P] of R12
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(77.1900 mm, 65.0000 mm): PTH pad 1 [LFO_P] of R11
-    @(64.2000 mm, 71.2800 mm): PTH pad 3 [LFO_P] of U5
+    @(72.5000 mm, 63.5050 mm): PTH pad 2 [LFO_P] of R10
+    @(60.2000 mm, 67.2800 mm): PTH pad 3 [LFO_P] of U5
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(83.5500 mm, 78.5000 mm): PTH pad 1 [LFO_R] of RV2
-    @(84.8100 mm, 73.0000 mm): PTH pad 2 [LFO_R] of R13
+    @(66.5500 mm, 82.0000 mm): PTH pad 1 [LFO_R] of RV2
+    @(83.0000 mm, 63.5050 mm): PTH pad 2 [LFO_R] of R13
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(77.1900 mm, 73.0000 mm): PTH pad 1 [LFO_SQ] of R13
-    @(77.1900 mm, 69.0000 mm): PTH pad 1 [LFO_SQ] of R12
+    @(79.5000 mm, 66.0450 mm): PTH pad 1 [LFO_SQ] of R12
+    @(83.0000 mm, 66.0450 mm): PTH pad 1 [LFO_SQ] of R13
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(77.1900 mm, 69.0000 mm): PTH pad 1 [LFO_SQ] of R12
-    @(64.2000 mm, 66.2000 mm): PTH pad 1 [LFO_SQ] of U5
+    @(60.2000 mm, 62.2000 mm): PTH pad 1 [LFO_SQ] of U5
+    @(79.5000 mm, 66.0450 mm): PTH pad 1 [LFO_SQ] of R12
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(121.0000 mm, 45.3575 mm): PTH pad 2 [OCT_M1] of SW2
-    @(129.5000 mm, 45.3575 mm): PTH pad 1 [OCT_M1] of SW3
+    @(112.8000 mm, 44.3575 mm): PTH pad 2 [OCT_M1] of SW2
+    @(121.3000 mm, 44.3575 mm): PTH pad 1 [OCT_M1] of SW3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(121.0000 mm, 48.6575 mm): PTH pad 5 [OCT_M2] of SW2
-    @(134.5000 mm, 45.3575 mm): PTH pad 3 [OCT_M2] of SW3
+    @(112.8000 mm, 47.6575 mm): PTH pad 5 [OCT_M2] of SW2
+    @(126.3000 mm, 44.3575 mm): PTH pad 3 [OCT_M2] of SW3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(110.8200 mm, 78.8800 mm): PTH pad 9 [OCT_Q0] of U3
-    @(118.5000 mm, 45.3575 mm): PTH pad 1 [OCT_Q0] of SW2
+    @(99.8200 mm, 80.8800 mm): PTH pad 9 [OCT_Q0] of U3
+    @(110.3000 mm, 44.3575 mm): PTH pad 1 [OCT_Q0] of SW2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(103.2000 mm, 76.3400 mm): PTH pad 7 [OCT_Q1] of U3
-    @(123.5000 mm, 45.3575 mm): PTH pad 3 [OCT_Q1] of SW2
+    @(92.2000 mm, 78.3400 mm): PTH pad 7 [OCT_Q1] of U3
+    @(115.3000 mm, 44.3575 mm): PTH pad 3 [OCT_Q1] of SW2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(103.2000 mm, 73.8000 mm): PTH pad 6 [OCT_Q2] of U3
-    @(123.5000 mm, 48.6575 mm): PTH pad 4 [OCT_Q2] of SW2
+    @(92.2000 mm, 75.8000 mm): PTH pad 6 [OCT_Q2] of U3
+    @(115.3000 mm, 47.6575 mm): PTH pad 4 [OCT_Q2] of SW2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(103.2000 mm, 71.2600 mm): PTH pad 5 [OCT_Q3] of U3
-    @(118.5000 mm, 48.6575 mm): PTH pad 6 [OCT_Q3] of SW2
+    @(92.2000 mm, 73.2600 mm): PTH pad 5 [OCT_Q3] of U3
+    @(110.3000 mm, 47.6575 mm): PTH pad 6 [OCT_Q3] of SW2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(121.1900 mm, 61.0000 mm): PTH pad 1 [OCT_SEL] of R7
-    @(132.0000 mm, 45.3575 mm): PTH pad 2 [OCT_SEL] of SW3
+    @(108.5000 mm, 66.0450 mm): PTH pad 1 [OCT_SEL] of R7
+    @(123.8000 mm, 44.3575 mm): PTH pad 2 [OCT_SEL] of SW3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(180.3500 mm, 86.0450 mm): PTH pad 1 [OSC_OUT] of R101
-    @(193.2000 mm, 71.2800 mm): PTH pad 3 [OSC_OUT] of U2
+    @(163.3500 mm, 90.5450 mm): PTH pad 1 [OSC_OUT] of R101
+    @(152.2000 mm, 68.2800 mm): PTH pad 3 [OSC_OUT] of U2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(110.8200 mm, 76.3400 mm): PTH pad 10 [OSC_OUT] of U3
-    @(180.3500 mm, 86.0450 mm): PTH pad 1 [OSC_OUT] of R101
+    @(152.2000 mm, 68.2800 mm): PTH pad 3 [OSC_OUT] of U2
+    @(99.8200 mm, 78.3400 mm): PTH pad 10 [OSC_OUT] of U3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(165.8473 mm, 64.0000 mm): PTH pad 2 [SPK_DRV] of C16
-    @(164.5000 mm, 77.8100 mm): PTH pad 1 [SPK_DRV] of R9
+    @(141.8473 mm, 66.0000 mm): PTH pad 2 [SPK_DRV] of C16
+    @(142.0000 mm, 78.0450 mm): PTH pad 1 [SPK_DRV] of R9
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(175.9000 mm, 51.8250 mm): PTH pad RN [SPK_DRV] of J4
-    @(165.8473 mm, 64.0000 mm): PTH pad 2 [SPK_DRV] of C16
+    @(161.5000 mm, 51.8250 mm): PTH pad RN [SPK_DRV] of J4
+    @(141.8473 mm, 66.0000 mm): PTH pad 2 [SPK_DRV] of C16
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(174.7500 mm, 71.5250 mm): PTH pad 1 [SPK_P] of J5
-    @(175.9000 mm, 57.3250 mm): PTH pad TN [SPK_P] of J4
+    @(147.7500 mm, 78.5250 mm): PTH pad 1 [SPK_P] of J5
+    @(161.5000 mm, 57.3250 mm): PTH pad TN [SPK_P] of J4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(203.1900 mm, 93.0000 mm): PTH pad 1 [STYLUS] of R6
-    @(211.8750 mm, 103.9000 mm): PTH pad T [STYLUS] of J3
+    @(174.5000 mm, 48.1250 mm): PTH pad T [STYLUS] of J3
+    @(183.0000 mm, 79.0450 mm): PTH pad 1 [STYLUS] of R6
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(200.8200 mm, 71.2800 mm): PTH pad 6 [TH] of U2
-    @(206.1900 mm, 69.0000 mm): PTH pad 1 [TH] of R3
+    @(152.2000 mm, 65.7400 mm): PTH pad 2 [TH] of U2
+    @(159.8200 mm, 68.2800 mm): PTH pad 6 [TH] of U2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(206.1900 mm, 69.0000 mm): PTH pad 1 [TH] of R3
-    @(207.5000 mm, 63.0000 mm): PTH pad 1 [TH] of C7
+    @(177.0000 mm, 66.0450 mm): PTH pad 1 [TH] of R3
+    @(168.5000 mm, 64.0000 mm): PTH pad 1 [TH] of C7
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(200.8200 mm, 71.2800 mm): PTH pad 6 [TH] of U2
-    @(193.2000 mm, 68.7400 mm): PTH pad 2 [TH] of U2
+    @(168.5000 mm, 64.0000 mm): PTH pad 1 [TH] of C7
+    @(159.8200 mm, 68.2800 mm): PTH pad 6 [TH] of U2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(210.8100 mm, 93.0000 mm): PTH pad 2 [TH] of R6
-    @(200.8200 mm, 71.2800 mm): PTH pad 6 [TH] of U2
+    @(183.0000 mm, 76.5050 mm): PTH pad 2 [TH] of R6
+    @(177.0000 mm, 66.0450 mm): PTH pad 1 [TH] of R3
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(122.5000 mm, 67.0000 mm): PTH pad 1 [TONE] of C10
-    @(122.5000 mm, 73.0000 mm): PTH pad 1 [TONE] of C11
+    @(108.5000 mm, 78.5000 mm): PTH pad 1 [TONE] of C10
+    @(113.0000 mm, 78.5000 mm): PTH pad 1 [TONE] of C11
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(128.8100 mm, 61.0000 mm): PTH pad 2 [TONE] of R7
-    @(122.5000 mm, 67.0000 mm): PTH pad 1 [TONE] of C10
+    @(108.5000 mm, 63.5050 mm): PTH pad 2 [TONE] of R7
+    @(108.5000 mm, 78.5000 mm): PTH pad 1 [TONE] of C10
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(127.5000 mm, 67.0000 mm): PTH pad 2 [TONE_SW] of C10
-    @(143.0000 mm, 45.3575 mm): PTH pad 2 [TONE_SW] of SW4
+    @(108.5000 mm, 73.5000 mm): PTH pad 2 [TONE_SW] of C10
+    @(134.8000 mm, 44.3575 mm): PTH pad 2 [TONE_SW] of SW4
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(94.0449 mm, 70.0000 mm): PTH pad 2 [VIB_INJ] of C20
-    @(96.8100 mm, 77.5000 mm): PTH pad 2 [VIB_INJ] of R14
+    @(85.5449 mm, 75.0000 mm): PTH pad 2 [VIB_INJ] of C20
+    @(86.5000 mm, 63.5050 mm): PTH pad 2 [VIB_INJ] of R14
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(127.5000 mm, 73.0000 mm): PTH pad 2 [VOL_TOP] of C11
-    @(151.9500 mm, 51.5000 mm): PTH pad 3 [VOL_TOP] of RV1
+    @(113.0000 mm, 73.5000 mm): PTH pad 2 [VOL_TOP] of C11
+    @(142.1500 mm, 50.5000 mm): PTH pad 3 [VOL_TOP] of RV1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(76.0000 mm, 48.6575 mm): PTH pad 5 [VSW_IN] of SW1
-    @(76.0000 mm, 45.3575 mm): PTH pad 2 [VSW_IN] of SW1
+    @(68.8000 mm, 47.6575 mm): PTH pad 5 [VSW_IN] of SW1
+    @(68.8000 mm, 44.3575 mm): PTH pad 2 [VSW_IN] of SW1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(61.9200 mm, 87.0000 mm): PTH pad 1 [VSW_IN] of D1
-    @(76.0000 mm, 48.6575 mm): PTH pad 5 [VSW_IN] of SW1
+    @(55.0000 mm, 92.7578 mm): PTH pad 1 [VSW_IN] of D1
+    @(68.8000 mm, 47.6575 mm): PTH pad 5 [VSW_IN] of SW1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(72.2700 mm, 115.3600 mm): PTH pad 3 [V_FILT] of U1
-    @(71.8100 mm, 108.0000 mm): PTH pad 2 [V_FILT] of R2
+    @(55.0000 mm, 107.5050 mm): PTH pad 2 [V_FILT] of R2
+    @(63.2700 mm, 109.3600 mm): PTH pad 3 [V_FILT] of U1
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(58.8176 mm, 115.0000 mm): PTH pad 1 [V_FILT] of C3
-    @(72.2700 mm, 115.3600 mm): PTH pad 3 [V_FILT] of U1
+    @(60.8176 mm, 100.0000 mm): PTH pad 1 [V_FILT] of C3
+    @(55.0000 mm, 107.5050 mm): PTH pad 2 [V_FILT] of R2
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(154.5000 mm, 79.0000 mm): PTH pad 1 [ZOBEL] of C15
-    @(156.5000 mm, 66.1900 mm): PTH pad 2 [ZOBEL] of R8
+    @(133.0000 mm, 74.5050 mm): PTH pad 2 [ZOBEL] of R8
+    @(137.0000 mm, 79.5000 mm): PTH pad 1 [ZOBEL] of C15
 
 ** Found 0 Footprint errors **
 

@@ -22,7 +22,7 @@ FP_CP8 = "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
 FP_DIP8 = "Package_DIP:DIP-8_W7.62mm_Socket"
 FP_DIP16 = "Package_DIP:DIP-16_W7.62mm_Socket"
 FP_TO92 = "Package_TO_SOT_THT:TO-92_Inline"
-FP_DO41 = "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+FP_DO41 = "Diode_THT:D_DO-41_SOD81_P5.08mm_Vertical_KathodeUp"
 FP_LED = "LED_THT:LED_D3.0mm"
 FP_POT = "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical"
 FP_TRIM = "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
@@ -59,7 +59,7 @@ def add(ref, lib_id, value, footprint, pins, block, desc="", mpn=""):
     PARTS.append(Part(ref, lib_id, value, footprint, {str(k): v for k, v in pins.items()}, block, desc, mpn))
 
 
-def R(ref, value, a, b, block, fp=FP_R, desc="Resistor, metal film 1% 0.25W"):
+def R(ref, value, a, b, block, fp=FP_R_VERT, desc="Resistor, metal film 1% 0.25W"):
     add(ref, "Device:R", value, fp, {1: a, 2: b}, block, desc)
 
 
@@ -187,7 +187,7 @@ R("R14", "4k7", "DEPTH_W", "VIB_INJ", B)
 CP("C20", "47u", "CV", "VIB_INJ", B)
 
 # ---- mechanical -----------------------------------------------------------------------------
-for n in range(1, 7):
+for n in range(1, 5):
     add(f"H{n}", "Mechanical:MountingHole", "M3", FP_HOLE, {}, "Mechanical", "Mounting hole M3")
 
 # nets that need a PWR_FLAG for ERC (driven only through passive parts)

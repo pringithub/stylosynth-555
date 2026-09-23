@@ -33,60 +33,57 @@ FREEROUTING = ROOT / "tools" / "freerouting-2.1.0.jar"
 FPDIRS = {"StyloSynth": KICAD / "lib" / "StyloSynth.pretty"}
 
 ORIGIN = (50.0, 40.0)        # board top-left in KiCad page coordinates (mm)
-BOARD_W, BOARD_H, CORNER_R = 170.0, 108.0, 3.0
-KEYPAD_ORIGIN = (37.0, 58.0)  # top-left of the 96 x 36 mm keyboard
-LADDER_ROWS = (45.0, 50.5)   # staggered rows of vertical ladder resistors above the keys
+BOARD_W, BOARD_H, CORNER_R = 136.0, 98.0, 3.0
+KEYPAD_ORIGIN = (20.0, 57.0)  # top-left of the 96 x 36 mm keyboard
+LADDER_Y = 49.5              # single row of vertical ladder resistors above the key vias
 POWER_NETS = ["GND", "+9V", "+5V", "VSW_IN", "DC_IN", "BAT_P", "V_FILT", "AMP_OUT", "SPK_DRV", "SPK_P", "HP"]
 
 # ref -> (x, y, rotation_deg, side, anchor)
 # anchor: "center" = bbox centre, "top" = bbox top at y, "right" = bbox right edge at x, "origin" = fp origin
 PLACEMENT = {
     # top edge: jacks + panel controls
-    "J1": (12, 0.0, 180, "F", "top"), "SW1": (26, 7, 0, "F", "center"), "D2": (34, 7, 0, "F", "center"),
-    "RV3": (46, 9, 0, "F", "center"), "SW5": (60, 7, 0, "F", "center"), "SW2": (71, 7, 0, "F", "center"),
-    "SW3": (82, 7, 0, "F", "center"), "SW4": (93, 7, 0, "F", "center"), "RV1": (108, 9, 0, "F", "center"),
-    "J4": (126, 0.0, 0, "F", "top"), "J3": (170.0, 62, 270, "F", "right"),
+    "J1": (6.8, 0.0, 180, "F", "top"), "SW1": (18.8, 6, 0, "F", "center"), "D2": (27.5, 6, 0, "F", "center"),
+    "RV3": (38.2, 8, 0, "F", "center"), "SW5": (51.8, 6, 0, "F", "center"), "SW2": (62.8, 6, 0, "F", "center"),
+    "SW3": (73.8, 6, 0, "F", "center"), "SW4": (84.8, 6, 0, "F", "center"), "RV1": (98.2, 8, 0, "F", "center"),
+    "J4": (111.6, 0.0, 0, "F", "top"), "J3": (122.6, 0.0, 0, "F", "top"),
     # vibrato LFO
-    "U5": (18, 30, 0, "F", "center"), "C17": (9, 22, 90, "F", "center"), "R10": (31, 21, 0, "F", "center"),
-    "R11": (31, 25, 0, "F", "center"), "R12": (31, 29, 0, "F", "center"), "R13": (31, 33, 0, "F", "center"),
-    "RV2": (31, 38.5, 0, "F", "center"), "C18": (8.5, 37.5, 0, "F", "center"), "C19": (43, 23, 0, "F", "center"),
-    "R14": (43, 37.5, 0, "F", "center"), "C20": (43, 30, 0, "F", "center"),
+    "U5": (14, 26, 0, "F", "center"), "C18": (13.5, 35.5, 0, "F", "center"), "RV2": (14, 42, 0, "F", "center"),
+    "R10": (22.5, 25, 90, "F", "center"), "R11": (26, 25, 90, "F", "center"), "R12": (29.5, 25, 90, "F", "center"),
+    "R13": (33, 25, 90, "F", "center"), "R14": (36.5, 25, 90, "F", "center"), "C17": (22.5, 36, 90, "F", "center"),
+    "C19": (28, 35, 0, "F", "center"), "C20": (34.5, 35, 0, "F", "center"),
     # octave divider
-    "U3": (57, 30, 0, "F", "center"), "C9": (65, 22, 90, "F", "center"),
+    "U3": (46, 32, 0, "F", "center"), "C9": (54, 26, 90, "F", "center"),
     # audio + amp
-    "R7": (75, 21, 0, "F", "center"), "C10": (75, 27, 0, "F", "center"), "C11": (75, 33, 0, "F", "center"),
-    "U4": (89, 30, 0, "F", "center"), "C12": (83, 39, 0, "F", "center"), "C13": (100, 23, 0, "F", "center"),
-    "C14": (100, 35, 90, "F", "center"), "R8": (106.5, 30, 90, "F", "center"), "C15": (107, 39, 0, "F", "center"),
-    "C16": (114, 24, 0, "F", "center"), "R9": (114.5, 34, 90, "F", "center"), "J5": (126, 31, 0, "B", "center"),
-    # oscillator (right of the keyboard)
-    "U2": (147, 30, 0, "F", "center"), "C6": (139, 22, 90, "F", "center"), "C7": (160, 23, 0, "F", "center"),
-    "R3": (160, 29, 0, "F", "center"), "R4": (160, 34, 0, "F", "center"), "R5": (160, 38.5, 0, "F", "center"),
-    "RV5": (158, 45, 0, "F", "center"), "C8": (139, 38, 90, "F", "center"), "R6": (157, 53, 0, "F", "center"),
-    "RV4": (143, 50, 0, "F", "center"),
+    "R7": (58.5, 25, 90, "F", "center"), "C10": (58.5, 36, 90, "F", "center"), "C11": (63, 36, 90, "F", "center"),
+    "U4": (71, 27, 0, "F", "center"), "C12": (70, 38, 0, "F", "center"), "C13": (80.5, 25, 0, "F", "center"),
+    "C14": (78, 37, 90, "F", "center"), "R8": (83, 36, 90, "F", "center"), "C15": (87, 37, 90, "F", "center"),
+    "C16": (90, 26, 0, "F", "center"), "R9": (92, 37, 90, "F", "center"), "J5": (99, 38, 0, "B", "center"),
+    # oscillator
+    "U2": (106, 27, 0, "F", "center"), "C6": (114, 25, 90, "F", "center"), "C7": (121, 24, 0, "F", "center"),
+    "R3": (127, 25, 90, "F", "center"), "R4": (118, 31, 90, "F", "center"), "R5": (121.5, 31, 90, "F", "center"),
+    "C8": (127, 32, 0, "F", "center"), "RV5": (123, 39, 0, "F", "center"), "R6": (133, 38, 90, "F", "center"),
+    "RV4": (123, 56, 90, "F", "center"),
     # power (left of the keyboard)
-    "D1": (17, 47, 0, "F", "center"), "C1": (11, 57, 0, "F", "center"), "C2": (24, 57, 90, "F", "center"),
-    "R1": (18, 63.5, 0, "F", "center"), "R2": (18, 68, 0, "F", "center"), "C3": (10, 75, 0, "F", "center"),
-    "U1": (21, 75, 0, "F", "center"), "C4": (29, 75, 0, "F", "center"), "C5": (18, 83, 0, "F", "center"),
-    "J2": (16, 93, 0, "B", "center"),
+    "D1": (5, 50, 90, "F", "center"), "C1": (12, 50, 0, "F", "center"), "C2": (5, 60, 90, "F", "center"),
+    "C3": (12, 60, 0, "F", "center"), "R2": (5, 69, 90, "F", "center"), "U1": (12, 69, 0, "F", "center"),
+    "R1": (5, 77, 90, "F", "center"), "C4": (12, 77, 0, "F", "center"), "C5": (5, 84, 90, "F", "center"),
+    "J2": (12.5, 87, 0, "B", "center"),
     # keys
     "K1": (KEYPAD_ORIGIN[0], KEYPAD_ORIGIN[1], 0, "F", "origin"),
     # mounting holes
-    "H1": (4, 4, 0, "F", "center"), "H2": (166, 4, 0, "F", "center"), "H3": (4, 104, 0, "F", "center"),
-    "H4": (166, 104, 0, "F", "center"), "H5": (85, 104, 0, "F", "center"), "H6": (164, 84, 0, "F", "center"),
+    "H1": (4, 23, 0, "F", "center"), "H2": (132, 46, 0, "F", "center"), "H3": (4, 94, 0, "F", "center"),
+    "H4": (132, 94, 0, "F", "center"),
 }
 _VIA_X = {n: g["via_x"] for n, _note, _kind, g in gen_keypad.layout()[0]}
 for seg in circuit.LADDER["segments"]:
-    PLACEMENT[f"R{101 + seg['segment']}"] = (KEYPAD_ORIGIN[0] + _VIA_X[seg["key"]],
-                                             LADDER_ROWS[seg["key"] % 2], 90, "F", "center")
+    PLACEMENT[f"R{101 + seg['segment']}"] = (KEYPAD_ORIGIN[0] + _VIA_X[seg["key"]], LADDER_Y, 90, "F", "center")
 
 SILK_TEXT = [  # (text, x, y, size_mm)
-    ("StyloSynth-555", 60, 101.5, 2.5), ("v1.1", 112, 101.5, 1.5),
-    ("VIBRATO LFO", 25, 17.5, 1.2), ("OCTAVE", 57, 17.5, 1.2), ("AMP", 92, 17.5, 1.2),
-    ("OSCILLATOR", 150, 17.5, 1.2), ("POWER", 17, 43, 1.2),
-    ("9V DC (-)", 12, 16.0, 1.0), ("ON", 26, 11.5, 1.0), ("DEPTH", 46, 16.5, 1.0), ("VIB", 60, 11.5, 1.0),
-    ("OCT-1", 71, 11.5, 1.0), ("OCT-2", 82, 11.5, 1.0), ("SOFT", 93, 11.5, 1.0), ("VOLUME", 108, 16.5, 1.0),
-    ("PHONES", 126, 20.5, 1.0), ("STYLUS", 160, 69, 1.0), ("RATE", 31, 42, 1.0),
-    ("TUNE (key 20)", 143, 54.5, 1.0), ("SPAN (key 1)", 158, 49.5, 1.0),
+    ("StyloSynth", 127, 68, 1.8), ("555  v1.2", 127, 72, 1.4),
+    ("9V DC (-)", 6.8, 17.5, 0.9), ("ON", 18.8, 11, 0.9), ("DEPTH", 38.2, 16.5, 0.9), ("VIB", 51.8, 11, 0.9),
+    ("OCT-1", 62.8, 11, 0.9), ("OCT-2", 73.8, 11, 0.9), ("SOFT", 84.8, 11, 0.9), ("VOLUME", 98.2, 16.5, 0.9),
+    ("PHONES", 111.6, 20.5, 0.9), ("STYLUS", 122.6, 20.5, 0.9), ("RATE", 21, 45.5, 0.9),
+    ("TUNE", 127.5, 62.5, 0.9), ("SPAN", 116, 39, 0.9),
 ]
 
 
