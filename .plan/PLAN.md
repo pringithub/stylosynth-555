@@ -6,6 +6,30 @@ files are reused. Only the published feature set and the lessons it documents ca
 
 ---
 
+## 0. Status & deviations (updated as work progresses)
+
+| Phase | Status |
+|---|---|
+| 0 Setup | done: git, `.venv` (system Python 3.12 with KiCad `pcbnew`), Freerouting 2.1.0 in `tools/` |
+| 1 Calc & sim | done: `calc_ladder.py`, `sim/run_sims.py` all PASS (ladder ±0.9 % model error, LFO 3.9–9.5 Hz, vibrato ±46 cents, LM386 3.35 V pk at full volume) |
+| 2 Schematic | done: generated from `circuit.py`; exported netlist matches the source exactly (`verify_netlist.py`) |
+| 3 PCB | in progress: placement is DRC-clean, autorouting under way |
+| 4 BOM | done: `bom/bom.md` / `bom.csv` (≈ $79 per unit, estimates) |
+| 5 Enclosure | **deferred: to be modelled in Blender later (user request); CadQuery dropped** |
+| 6 Fab & docs | assembly/tuning docs written; fab export pending routing |
+
+Deviations from the original plan:
+- **KiCad 7.0.11** (Ubuntu package), not 9. There is no CLI ERC/DRC, so the checks are done another way:
+  - ERC is replaced by the netlist round-trip check (`verify_netlist.py`).
+  - DRC runs via `pcbnew.WriteDRCReport`.
+- **ngspice** is driven through `libngspice.so.0` via ctypes (installed with KiCad); no conda install was needed.
+- **Octave select** uses two DPDT slide switches (OCT-1, OCT-2) as a 2-bit selector, because the stock
+  library has no 1P4T footprint. It still gives 4 exact octaves.
+- **Vibrato rate** is a board trimmer (RV2); DEPTH is the panel pot.
+- **Schematic** is a single flat A1 sheet with framed blocks, not hierarchical sheets.
+
+---
+
 ## 1. Goals
 
 | # | Requirement | Source |
