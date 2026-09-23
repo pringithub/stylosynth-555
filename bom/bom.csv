@@ -71,6 +71,11 @@ Qty,References,Value,Description,Footprint,Manufacturer,MPN,Verify,Est. unit USD
 1,-,-,Stylus: 3.5 mm mono plug + 1 m coiled/flex cable,-,generic,3.5 mm mono plug + cable,yes,2.00,2.00
 1,-,-,Stylus tip: 4 mm banana plug or M3 brass screw/insert,-,generic,brass tip,yes,0.50,0.50
 2,-,-,"Knob for 6 mm shaft (volume, depth)",-,generic,6 mm knob,yes,0.80,1.60
-6,-,-,M3 standoff / heat-set insert + M3x6 screw,-,generic,M3 hardware,yes,0.20,1.20
+4,-,-,"Printed tray: M3 heat-set insert, M3 x 5.7 mm (4.0 mm hole)",-,generic,Ruthex-style M3x5.7,yes,0.15,0.60
+4,-,-,"Printed tray: M3 x 6 mm screw, pan/button head (PCB to tray)",-,generic,ISO 7380 M3x6,no,0.05,0.20
+4,-,-,"Acrylic: M3 x 25 mm brass hex standoff, female-female",-,generic,M3x25 F-F standoff,yes,0.25,1.00
+8,-,-,Acrylic: M3 x 6 mm screw (standoffs to PCB and bottom plate),-,generic,ISO 7380 M3x6,no,0.05,0.40
+4,-,-,Acrylic: M3 x 30 mm screw + M3 nut (clamps the ring stack),-,generic,ISO 7380 M3x30 + DIN 934,no,0.10,0.40
+1,-,-,"Acrylic: 3 mm clear cast acrylic, laser cut (1 bottom plate + 8 rings, 151 x 113 mm)",-,Ponoko/local laser,see enclosure/out/acrylic/*.dxf,yes,15.00,15.00
 4,-,-,"Rubber foot, adhesive",-,generic,10 mm bumpon,yes,0.10,0.40
 1,-,-,"PCB 200x120 mm, 2-layer, 1.6 mm, ENIG, black mask/white silk (price per board of 5)",-,JLCPCB/PCBWay,fab order,yes,12.00,12.00

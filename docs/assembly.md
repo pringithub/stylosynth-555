@@ -48,4 +48,36 @@ U4 **LM386**, U5 **LM358**. Check the pin-1 notch. The CD4040 and TLC555 are CMO
 | U5 pin 1 (LFO square) | toggling 0 ↔ about 3.5 V at 4–9 Hz |
 | Stylus on any key | tone from the speaker; plugging in headphones mutes the speaker |
 
+## Enclosure
+Both versions leave the PCB exposed as the top face. It is held by the 4 M3 holes, and the 9 V battery
+and speaker sit underneath. The jacks and switches stay above the enclosure edge, so no cut-outs are
+needed. Files are in `enclosure/out/`. To regenerate them, run `enclosure/gen_geometry.py`, then
+`enclosure/blender_build.py` inside Blender. The model is in `stylosynth_enclosures.blend`, and the renders are in
+[docs/renders](renders/).
+
+### A) 3D-printed tray (`print/tray.stl`, 141.8 × 103.8 × 25.6 mm, about 62 cm³)
+- **Print settings:** PETG or PLA, 0.2 mm layers, 3 walls, 15 % infill. Print floor down; no supports are needed.
+- Press **4 × M3 × 5.7 heat-set inserts** into the corner bosses (4.0 mm holes).
+- **Speaker:** a 40 mm, 8 Ω speaker drops into the printed ring over the grille. Fix it with a few dots of hot glue.
+- **Battery:** the 9 V battery sits between the corner ribs. Its snap lead goes to J2 (back side).
+- Plug the speaker into J5, lay the PCB in (it sits flush with the wall top), and fit **4 × M3 × 6** screws.
+- **Feet:** stick 4 × 10 mm rubber bumpers in the recesses.
+- **Stylus** (`print/stylus_body.stl`): print it standing up, 0.12 mm layers.
+  - Feed the cable through the 4 mm channel and solder it to a 4 mm banana plug.
+  - Press the plug into the tip socket.
+  - Fit a 3.5 mm mono plug on the other end.
+
+### B) Laser-cut acrylic stack (`acrylic/*.dxf`, 3 mm clear cast acrylic, units mm, layer `CUT`)
+| File | Qty | Purpose |
+|---|---|---|
+| `bottom_plate_x1.dxf` | 1 | base: speaker grille, battery strap slots, standoff and corner-bolt holes |
+| `ring_x8.dxf` | 8 | side walls, stacked 24 mm high |
+1. Screw **4 × M3 × 25 brass standoffs** to the bottom plate from underneath (M3 × 6).
+2. Glue the speaker over the grille, and strap the battery with velcro through the slots.
+3. Stack the 8 rings and clamp everything with **4 × M3 × 30** corner bolts and nuts.
+4. Place the PCB on the standoffs (it floats 1 mm above the rings) and fit 4 × M3 × 6 screws.
+
+A fit check in `gen_geometry.py` confirms that the battery, speaker, bosses and pillars clear the back-side
+parts and the THT leads, with at least 1 mm to spare, in both versions.
+
 Next step: [tuning.md](tuning.md).

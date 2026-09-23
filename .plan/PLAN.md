@@ -13,10 +13,10 @@ files are reused. Only the published feature set and the lessons it documents ca
 | 0 Setup | done: git, `.venv` (system Python 3.12 with KiCad `pcbnew`), Freerouting 2.1.0 in `tools/` |
 | 1 Calc & sim | done: `calc_ladder.py` (+ Monte Carlo), `sim/run_sims.py` all PASS (ngspice vs model spread 0.5 cents, calibrated tuning p95 ±3.6 cents, LFO 3.9–9.5 Hz, vibrato ±46 cents, LM386 3.35 V pk at full volume) |
 | 2 Schematic | done: generated from `circuit.py`; exported netlist matches the source exactly (`verify_netlist.py`) |
-| 3 PCB | in progress: v1.1 170 × 108 mm with a piano-layout keyboard, placement DRC-clean, autorouting under way |
-| 4 BOM | done: `bom/bom.md` / `bom.csv` (≈ $50 per unit, estimates) |
-| 5 Enclosure | **deferred: to be modelled in Blender later (user request); CadQuery dropped** |
-| 6 Fab & docs | assembly/tuning docs written; fab export pending routing |
+| 3 PCB | done: v1.2 136 × 98 mm, piano keyboard, fully routed (Freerouting; GND via pours), **DRC: 0 errors** |
+| 4 BOM | done: `bom/bom.md` / `bom.csv` (≈ $66 per unit including enclosure hardware, estimates) |
+| 5 Enclosure | done: 3D-printed tray + stylus (manifold STLs) and laser-cut acrylic stack (DXF); Blender model with PCB + components; fit check PASS |
+| 6 Fab & docs | done: `hardware/fab/` (Gerbers zip, drill, pos, STEP, PDFs), assembly/tuning/enclosure docs, renders |
 
 Deviations from the original plan:
 - **KiCad 7.0.11** (Ubuntu package), not 9. There is no CLI ERC/DRC, so the checks are done another way:

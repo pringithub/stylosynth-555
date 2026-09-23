@@ -298,18 +298,19 @@ def add_internals(coll, dx, z_floor):
 
 def build_printed(coll, pcb_coll):
     petg = material("PETG_print", (0.13, 0.32, 0.55), rough=0.55)
-    tray = slabs_object("SS_Tray", MESHES["tray_slabs"], coll, petg)
-    stylus = slabs_object("SS_Stylus_body", MESHES["stylus_slabs"], coll, petg)
+    tray = mesh_object("SS_Tray", MESHES["tray"]["verts"], MESHES["tray"]["faces"], coll, petg)
+    stylus = mesh_object("SS_Stylus_body", MESHES["stylus"]["verts"], MESHES["stylus"]["faces"], coll, petg)
     tray_nm, stylus_nm = non_manifold_edges(tray), non_manifold_edges(stylus)
-    write_stl(tray, OUT / "print" / "tray.stl")
-    write_stl(stylus, OUT / "print" / "stylus_body.stl")
-    # display the stylus lying beside the tray, tip towards the player
-    stylus.rotation_euler = (math.radians(-90), 0, 0)
-    stylus.location = (BW + 14.0, -BH + 5.0, P["stylus_d"] / 2)
+    write_stl(tray, OUT / "print" / "tray_from_blender.stl")
+    write_stl(stylus, OUT / "print" / "stylus_body_from_blender.stl")
+    # display the stylus lying beside the tray, tip towards the player (+90 deg about x maps +z to -y)
+    sx, sy0 = BW + 14.0, 8.0
+    stylus.rotation_euler = (math.radians(90), 0, 0)
+    stylus.location = (sx, sy0, P["stylus_d"] / 2)
     brass = MATS["SS_Brass"]
     tip = cyl("SS_Stylus_tip", 0, 0, 2.0, 0, 8, brass, coll, 24, r_top=1.2)
-    tip.rotation_euler = (math.radians(-90), 0, 0)
-    tip.location = (BW + 14.0, -BH + 5.0 - P["stylus_len"] - 2.0, P["stylus_d"] / 2)
+    tip.rotation_euler = (math.radians(90), 0, 0)
+    tip.location = (sx, sy0 - P["stylus_len"] + 4.0, P["stylus_d"] / 2)
     feet = material("Rubber", (0.02, 0.02, 0.02), rough=0.9)
     fi = P["feet_inset"] - P["pcb_clear"] - P["tray_wall"]
     for i, (x, y) in enumerate([(fi, fi), (BW - fi, fi), (fi, BH - fi), (BW - fi, BH - fi)]):

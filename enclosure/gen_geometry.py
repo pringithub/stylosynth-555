@@ -41,7 +41,7 @@ P = {
     "boss_d": 7.0, "insert_d": 4.0, "insert_depth": 5.7,   # M3 x 5.7 heat-set inserts
     "battery": [48.5, 26.5, 17.5], "battery_xy": [22.0, 58.0],   # 9V block, board coords of its top-left
     "speaker_d": 40.0, "speaker_h": 6.0, "speaker_xy": [104.0, 73.0],
-    "support_pillars": [[45.0, 90.0], [88.0, 91.5]],       # unscrewed PCB supports under the keyboard
+    "support_pillars": [[45.0, 90.0], [82.0, 92.0]],       # unscrewed PCB supports under the keyboard
     "jack_notches": [],                                   # jacks sit above the wall/frame top, no notches needed
     "feet_d": 10.5, "feet_inset": 11.0,
     "stylus_d": 10.0, "stylus_len": 110.0,
@@ -143,9 +143,15 @@ def compose_texture(prefix):
 def acrylic_layers(geo):
     inner = rounded_rect(BOARD_W, BOARD_H, CORNER_R, P["pcb_clear"])
     outer = rounded_rect(BOARD_W, BOARD_H, CORNER_R, P["pcb_clear"] + P["acr_frame_w"])
-    c = P["pcb_clear"] + P["acr_corner_bolt_inset"]
-    bolts = [(-c, -c), (BOARD_W + c, -c), (-c, BOARD_H + c), (BOARD_W + c, BOARD_H + c)]
+    # bolt on the corner diagonal, halfway through the frame, so it can't break through the rounded edge
+    r_mid = CORNER_R + P["pcb_clear"] + P["acr_frame_w"] / 2
+    d = CORNER_R - r_mid / math.sqrt(2)
+    bolts = [(d, d), (BOARD_W - d, d), (d, BOARD_H - d), (BOARD_W - d, BOARD_H - d)]
     bolt_holes = unary_union([Point(x, y).buffer(P["acr_bolt_d"] / 2, quad_segs=12) for x, y in bolts])
+    frame = outer.difference(inner)
+    for x, y in bolts:
+        if not frame.buffer(-0.8).contains(Point(x, y).buffer(P["acr_bolt_d"] / 2)):
+            raise SystemExit(f"acrylic bolt at {x:.2f},{y:.2f} is too close to a frame edge")
 
     ring = outer.difference(inner).difference(bolt_holes)
     notches = []
@@ -223,6 +229,10 @@ def fit_check(geo):
         elif top > lead_floor - 1.0:
             errors.append(f"{name} top z={top} leaves < 1 mm below the leads (z={lead_floor})")
     inside = rounded_rect(BOARD_W, BOARD_H, CORNER_R, -1.0)
+    spk_ring = Point(*P["speaker_xy"]).buffer(P["speaker_d"] / 2 + 2.3)
+    for i, xy in enumerate(P["support_pillars"]):
+        if Point(*xy).buffer(3.0 + 1.0).intersects(spk_ring):
+            errors.append(f"pillar{i} is within 1 mm of the speaker ring")
     for name, shape, _ in items:
         if not name.startswith("boss") and not inside.contains(shape):   # bosses merge into the wall
             errors.append(f"{name} extends outside the board footprint")
@@ -270,13 +280,37 @@ def prism(poly, z0, z1):
 
 
 def mesh_of(slabs):
-    verts, faces = [], []
+    """Union of extruded slabs as one guaranteed-manifold mesh (manifold3d)."""
+    import manifold3d as m3
+    solid = None
     for poly, z0, z1 in slabs:
-        v, f = prism(poly, z0, z1)
-        off = len(verts)
-        verts += v
-        faces += [tuple(i + off for i in fc) for fc in f]
-    return {"verts": [list(map(lambda c: round(c, 5), v)) for v in verts], "faces": faces}
+        contours = []
+        for pg in to_blender(poly):
+            contours.append([list(c) for c in pg.exterior.coords[:-1]])
+            contours += [[list(c) for c in r.coords[:-1]] for r in pg.interiors]
+        part = m3.CrossSection(contours, m3.FillRule.EvenOdd).extrude(z1 - z0).translate([0, 0, z0])
+        solid = part if solid is None else solid + part
+    if solid.status() != m3.Error.NoError:
+        raise RuntimeError(f"manifold error {solid.status()}")
+    m = solid.to_mesh()
+    return {"verts": [[round(float(c), 5) for c in v[:3]] for v in m.vert_properties],
+            "faces": [[int(i) for i in t] for t in m.tri_verts], "volume_mm3": round(solid.volume(), 1)}
+
+
+def write_stl(mesh, path):
+    import struct
+    path.parent.mkdir(parents=True, exist_ok=True)
+    v = mesh["verts"]
+    with open(path, "wb") as fh:
+        fh.write(b"StyloSynth-555".ljust(80, b" "))
+        fh.write(struct.pack("<I", len(mesh["faces"])))
+        for a, b, c in mesh["faces"]:
+            pa, pb, pc = v[a], v[b], v[c]
+            u = [pb[i] - pa[i] for i in range(3)]
+            w = [pc[i] - pa[i] for i in range(3)]
+            n = [u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]]
+            ln = math.sqrt(sum(x * x for x in n)) or 1.0
+            fh.write(struct.pack("<12fH", *[x / ln for x in n], *pa, *pb, *pc, 0))
 
 
 def grille_holes(center, radius, hole_d=3.0, pitch=4.2):
@@ -368,12 +402,16 @@ def main():
         acr[name] = {"qty": qty, "rings": poly_rings(poly)}
     (OUT / "enclosure.json").write_text(json.dumps({"params": P, "acrylic": acr, "acrylic_bolts": bolts}, indent=1))
 
-    meshes = {"tray_slabs": [mesh_of([s]) for s in tray_slabs(geo)], "stylus_slabs": [mesh_of([s]) for s in stylus_slabs()],
+    meshes = {"tray": mesh_of(tray_slabs(geo)), "stylus": mesh_of(stylus_slabs()),
               "acrylic": {name: mesh_of([(poly, 0.0, P["acr_t"])]) for name, (poly, _q) in layers.items()},
               "pcb": mesh_of([(rounded_rect(BOARD_W, BOARD_H, CORNER_R).difference(
                   unary_union([Point(*h["xy"]).buffer(h["d"] / 2, quad_segs=24) for h in geo["holes"]])),
                   0.0, P["pcb_t"])])}
     (OUT / "meshes.json").write_text(json.dumps(meshes))
+    write_stl(meshes["tray"], OUT / "print" / "tray.stl")
+    write_stl(meshes["stylus"], OUT / "print" / "stylus_body.stl")
+    print(f"tray {meshes['tray']['volume_mm3'] / 1000:.1f} cm3, stylus {meshes['stylus']['volume_mm3'] / 1000:.1f} cm3 "
+          "(manifold) -> out/print/*.stl")
 
     errors = fit_check(geo) + acrylic_fit_check(geo)
     print(f"{len(geo['components'])} components, {len(geo['holes'])} holes; textures + "

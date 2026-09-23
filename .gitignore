@@ -10,3 +10,8 @@ fp-info-cache
 _autosave-*
 hardware/kicad/stylosynth.net
 tools/
+hardware/kicad/*.dsn
+hardware/kicad/*.ses
+hardware/kicad/freerouting.log
+enclosure/out/print/*_from_blender.stl
+*.blend1
