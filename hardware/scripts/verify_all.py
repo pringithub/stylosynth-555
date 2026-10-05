@@ -239,8 +239,14 @@ def step_pcb():
 
 # ---- 6. mechanical fit ---------------------------------------------------------------------------------
 def step_fit():
-    rc, out = run([PY, "enclosure/gen_geometry.py"])
-    return {"ok": rc == 0 and "fit check: PASS" in out, "detail": out.splitlines()[-1] if out else ""}
+    """Fit check on the committed board, written to a temp dir so the real enclosure outputs are untouched."""
+    import os
+    with tempfile.TemporaryDirectory() as td:
+        pcb = committed_board(Path(td))
+        env = {**os.environ, "STYLOSYNTH_PCB": str(pcb), "STYLOSYNTH_ENC_OUT": str(Path(td) / "out")}
+        p = subprocess.run([PY, "enclosure/gen_geometry.py"], capture_output=True, text=True, cwd=ROOT, env=env)
+    out = (p.stdout + p.stderr).strip()
+    return {"ok": p.returncode == 0 and "fit check: PASS" in out, "detail": out.splitlines()[-1] if out else ""}
 
 
 # ---- report --------------------------------------------------------------------------------------------

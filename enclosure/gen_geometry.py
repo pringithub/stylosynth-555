@@ -28,7 +28,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "hardware" / "scripts"))
 from build_pcb import BOARD_H, BOARD_W, CORNER_R, ORIGIN, PCB  # noqa: E402
 
-OUT = ROOT / "enclosure" / "out"
+import os  # noqa: E402
+PCB = Path(os.environ.get("STYLOSYNTH_PCB", PCB))
+OUT = Path(os.environ.get("STYLOSYNTH_ENC_OUT", ROOT / "enclosure" / "out"))
 TEX_PX_PER_MM = 16
 
 # ---- shared mechanical parameters (mm) -----------------------------------------------------
@@ -415,7 +417,7 @@ def main():
 
     errors = fit_check(geo) + acrylic_fit_check(geo)
     print(f"{len(geo['components'])} components, {len(geo['holes'])} holes; textures + "
-          f"{len(layers)} DXFs written to {OUT.relative_to(ROOT)}")
+          f"{len(layers)} DXFs written to {OUT}")
     if errors:
         print("FIT CHECK FAILED:\n  " + "\n  ".join(errors))
         return 1
