@@ -55,7 +55,7 @@ SOURCING = [
 OFF_BOARD = [  # (qty, description, manufacturer, mpn, est_unit_usd, verify)
     (3, "IC socket DIP-8 (U2, U4, U5)", "generic", "DIP-8 machined socket", 0.30, "yes"),
     (1, "IC socket DIP-16 (U3)", "generic", "DIP-16 machined socket", 0.40, "yes"),
-    (1, "Speaker 8 ohm 0.5-1 W, 40-50 mm", "generic", "8R 1W 50 mm", 2.50, "yes"),
+    (1, "Speaker 8 ohm, 1 W min (full-volume output ≈ 0.7 W), 40 mm", "generic", "8R 1W 40 mm", 2.50, "yes"),
     (1, "9V battery snap with leads", "generic", "9V snap, 150 mm leads", 0.40, "yes"),
     (4, "JST XH 2-pin housing + 2 crimp contacts (battery, speaker)", "JST", "XHP-2 + SXH-001T-P0.6", 0.20, "no"),
     (1, "Stylus: 3.5 mm mono plug + 1 m coiled/flex cable", "generic", "3.5 mm mono plug + cable", 2.00, "yes"),
